@@ -73,7 +73,7 @@
                 {"x":"1", "y":"-1"},
                 {"x":"0", "y":"1"},
                 {"x":"0", "y":"-1"}]}},
-    {"id":"5", "name":"M1895", "type":"hg", "rarity":"2",
+    {"id":"5", "name":"Nagant M1895", "type":"hg", "rarity":"2",
         "hp":{"1":"35", "100":"70"},
         "dmg":{"1":"11", "100":"32"},
         "dodge":{"1":"11", "100":"92"},
@@ -619,6 +619,34 @@
                 "hit":{"1":"50", "5":"50"}},
             "grid":[
                 {"x":"-1", "y":"0"}]}},
+    {"id":"28", "name":"MP7", "type":"smg", "rarity":"5",
+        "isUnreleased":true,
+        "hp":{"1":99, "100":198},
+        "dmg":{"1":13, "100":30},
+        "hit":{"1":3, "100":13},
+        "dodge":{"1":12, "100":69},
+        "fireOfRate":{"1":65, "100":91},
+        "skill":{
+            "name":"Moon Dancer",
+            "firstCooldownTime":6,
+            "cooldownTime":{"1":10, "10":8},
+            "detailText":{
+                "0":"Reduce own ROF by {0}%, increase evasion by {2}% and speed by {1} lasts {3} seconds.",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":2, "attr":"value"}, {"effectIndex":3, "attr":"value"}, {"effectIndex":3, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "type":"debuff", "target":"self","attribute":"fireOfRate", "value":{"1":40, "10":20}, "time":{"1":3, "10":5}},
+                {"filter":"active", "type":"debuff", "target":"self","attribute":"hit", "value":{"1":40, "10":20}, "time":{"1":3, "10":5}},
+                {"filter":"active", "type":"buff", "target":"self","attribute":"movementSpeed", "value":{"1":30, "10":50}, "time":{"1":3, "10":5}},
+                {"filter":"active", "type":"buff", "target":"self","attribute":"dodge", "value":{"1":100, "10":180}, "time":{"1":3, "10":5}}
+            ]},
+        "aura":{
+            "target":"ar", "effect":{
+                "fireOfRate":{"0":15},
+                "hit":{"0":25}},
+            "grid":[
+                {"x":-1, "y":1},
+                {"x":-1, "y":0},
+                {"x":-1, "y":-1}]}},
     {"id":"29", "name":"STEN Mk II", "type":"smg", "rarity":"3",
         "hp":{"1":"93", "100":"185"},
         "dmg":{"1":"9", "100":"26"},
@@ -862,6 +890,7 @@
             "grid":[
                 {"x":"1", "y":"0"}]}},
     {"id":"41", "name":"Simonova", "type":"rf", "rarity":"2",
+        "displayName":"Simonova<br>(SKS)",
         "hp":{"1":"47", "100":"93"},
         "dmg":{"1":"39", "100":"100"},
         "dodge":{"1":"5", "100":"34"},
@@ -1012,7 +1041,8 @@
                 "cooldownTime":{"1":"18", "5":"18"}},
             "grid":[
                 {"x":"1", "y":"0"}]}},
-    {"id":"0049", "name":"Type56", "type":"rf", "rarity":"3",
+    {"id":"49", "name":"Type 56", "type":"rf", "rarity":"3",
+        "isUnreleased": true,
         "hp":{"1":"47", "100":"93"},
         "dmg":{"1":"39", "100":"103"},
         "dodge":{"1":"5", "100":"36"},
@@ -1033,7 +1063,7 @@
             "grid":[
                 {"x":"0", "y":"1"},
                 {"x":"0", "y":"-1"}]}},
-    {"id":"50", "name":"Lee Enfield", "type":"rf", "rarity":"5",
+    {"id":"50", "name":"Lee-Enfield", "type":"rf", "rarity":"5",
         "hp":{"1":"40", "100":"80"},
         "dmg":{"1":"45", "100":"135"},
         "dodge":{"1":"5", "100":"40"},
@@ -1488,7 +1518,7 @@
             "firstCooldownTime":"6",
             "cooldownTime":{"1":"20", "10": "16"},
             "effect":{
-                "dmg":{"1":"40", "10":"65"},
+                "dmg":{"1":"40", "10":"75"},
                 "fireOfRate":{"1":"15", "10":"25"},
                 "time":{"1":"3", "10":"5"}}},
         "aura":{
@@ -1497,6 +1527,34 @@
             "grid":[
                 {"x":"1", "y":"1"},
                 {"x":"1", "y":"-1"}]}},
+    {"id":"73", "name":"AUG", "type":"ar", "rarity":"5",
+        "hp":{"1":61, "100":121},
+        "dmg":{"1":21, "100":55},
+        "hit":{"1":7, "100":57},
+        "dodge":{"1":7, "100":46},
+        "fireOfRate":{"1":50, "100":75},
+        "criRate":30,
+        "skill":{
+            "name":"Rain of Burial",
+            "firstCooldownTime":4,
+            "cooldownTime":{"1":20, "10": 16},
+            "detailText":{
+                "0":"Reduce own Accuracy by {0}, increase ROF by 150 and enter sweep mode, lasts for {1} seconds.",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "type":"debuff", "target":"self", "attribute":"hit", "value":{"1":30, "10":0}, "time":{"1":3, "10":7}},
+                {"filter":"active", "type":"buff", "target":"self", "attribute":"attackFrame", "value":{"0":10}, "time":{"1":3, "10":7}}
+            ]},
+        "aura":{
+            "target":"all", "effect":{
+                "dmg":{"0":12},
+                "hit":{"0":20}},
+            "grid":[
+                {"x":0, "y":1},
+                {"x":0, "y":-1},
+                {"x":1, "y":0},
+                {"x":1, "y":1},
+                {"x":1, "y":-1}]}},
     {"id":"74", "name":"SIG-510", "type":"ar", "rarity":"2",
         "hp":{"1":"58", "100":"116"},
         "dmg":{"1":"20", "100":"56"},
@@ -2118,6 +2176,39 @@
                 {"x":"-1", "y":"1"},
                 {"x":"-1", "y":"0"},
                 {"x":"-1", "y":"-1"}]}},
+    {"id":"102", "name":"UMP40", "type":"smg", "rarity":"4",
+        "isUnreleased":true,
+        "hp":{"1":"90", "100":"180"},
+        "dmg":{"1":"10", "100":"27"},
+        "dodge":{"1":"10", "100":"75"},
+        "hit":{"1":"2", "100":"14"},
+        "fireOfRate":{"1":"59", "100":"85"},
+        "skill":{
+            "name":"烙印超載",
+            "type":"activeWithPassive",
+            "target":"self",
+            "firstCooldownTime":"1",
+            "cooldownTime":{"1":"666", "10": "666"},
+            "detailText":{
+                "val":"未釋放技能時<br> 每2秒回避上升{0}% 傷害下降{1}% 最多疊加5層。<br> 主動效果:清空當前所有被動效果，釋放後每2秒傷害上升{2}%，回避下降{3}% 最多疊加5層。"
+            },
+            "stack":5,
+            "effect":{
+                "dodge":{"1":"10", "10":"10", "type":"buff", "stackMax":"5", "stackUpWhenEveryTime":"2", "name":"102_p"},
+                "dmg":{"1":"-5", "10":"-5", "type":"buff", "stackMax":"5", "stackUpWhenEveryTime":"2", "name":"102_p"},
+                "time":{"1":"0", "10":"0"}},
+            "effect2":{
+                "dmg":{"1":"20", "10":"30", "type":"buff", "stackMax":"5", "stackUpWhenEveryTime":"2", "cleanBuff":"102_p"},
+                "dodge":{"1":"-20", "10":"-25", "type":"buff", "stackMax":"5", "stackUpWhenEveryTime":"2", "cleanBuff":"102_p"},
+                "time":{"1":"0", "10":"0"}}},
+        "aura":{
+            "target":"smg", "effect":{
+                "criRate":{"1":"500", "5":"500"}},
+            "grid":[
+                {"x":"0", "y":"1"},
+                {"x":"1", "y":"1"},
+                {"x":"0", "y":"-1"},
+                {"x":"1", "y":"-1"}]}},
     {"id":"103", "name":"UMP45", "type":"smg", "rarity":"4",
         "hp":{"1":"93", "100":"185"},
         "dmg":{"1":"11", "100":"28"},
@@ -2355,7 +2446,8 @@
                 {"x":"1", "y":"1"},
                 {"x":"1", "y":"0"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"00113", "name":"SPS", "type":"hg", "rarity":"3",
+    {"id":"113", "name":"SPS", "type":"hg", "rarity":"3",
+        "isUnreleased":true,
         "hp":{"1":"35", "100":"70"},
         "dmg":{"1":"12", "100":"33"},
         "dodge":{"1":"9", "100":"68"},
@@ -2589,7 +2681,7 @@
                 "dodge":{"1":"10", "5":"10"}},
             "grid":[
                 {"x":"1", "y":"0"}]}},
-    {"id":"00123", "name":"P99", "type":"hg", "rarity":"3",
+    {"id":"123", "name":"P99", "type":"hg", "rarity":"3",
         "hp":{"1":"30", "100":"60"},
         "dmg":{"1":"12", "100":"31"},
         "dodge":{"1":"12", "100":"87"},
@@ -2658,7 +2750,7 @@
             "grid":[
                 {"x":"1", "y":"1"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"00126", "name":"NZ75", "type":"hg", "rarity":"5",
+    {"id":"126", "name":"NZ75", "type":"hg", "rarity":"5",
         "hp":{"1":"37", "100":"73"},
         "dmg":{"1":"12", "100":"33"},
         "dodge":{"1":"9", "100":"74"},
@@ -2684,7 +2776,7 @@
                 {"x":"1", "y":"0"},
                 {"x":"0", "y":"-1"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"127", "name":"Type79", "type":"smg", "rarity":"5",
+    {"id":"127", "name":"Type 79", "type":"smg", "rarity":"5",
         "hp":{"1":"97", "100":"194"},
         "dmg":{"1":"13", "100":"32"},
         "dodge":{"1":"10", "100":"70"},
@@ -2770,7 +2862,8 @@
                 "dodge":{"1":"18", "5":"18"}},
             "grid":[
                 {"x":"1", "y":"-1"}]}},
-    {"id":"00131", "name":"EVO 3", "type":"smg", "rarity":"3",
+    {"id":"131", "name":"EVO 3", "type":"smg", "rarity":"3",
+        "isUnreleased":true,
         "hp":{"1":"97", "100":"194"},
         "dmg":{"1":"9", "100":"23"},
         "dodge":{"1":"10", "100":"68"},
@@ -2840,7 +2933,7 @@
                 "fireOfRate":{"1":"20", "5":"20"}},
             "grid":[
                 {"x":"1", "y":"0"}]}},
-    {"id":"00134", "name":"AR70", "type":"ar", "rarity":"3",
+    {"id":"134", "name":"AR70", "type":"ar", "rarity":"3",
         "hp":{"1":"55", "100":"110"},
         "dmg":{"1":"18", "100":"50"},
         "dodge":{"1":"5", "100":"41"},
@@ -2885,7 +2978,8 @@
                 {"x":"-1", "y":"1"},
                 {"x":"-1", "y":"0"},
                 {"x":"-1", "y":"-1"}]}},
-    {"id":"00136", "name":"PP-19", "type":"smg", "rarity":"4",
+    {"id":"136", "name":"PP-19", "type":"smg", "rarity":"4",
+        "isUnreleased":true,
         "hp":{"1":"88", "100":"176"},
         "dmg":{"1":"10", "100":"26"},
         "dodge":{"1":"10", "100":"74"},
@@ -2906,6 +3000,30 @@
                 "dmg":{"1":"24", "5":"24"}},
             "grid":[
                 {"x":"-1", "y":"0"}]}},
+    {"id":"137", "name":"PP-19-01", "type":"smg", "rarity":"4",
+        "hp":{"1":"97", "100":"194"},
+        "dmg":{"1":"11", "100":"27"},
+        "dodge":{"1":"10", "100":"68"},
+        "hit":{"1":"2", "100":"13"},
+        "fireOfRate":{"1":"60", "100":"85"},
+        "skill":{
+            "name":"Smoke Grenade",
+            "type":"debuff",
+            "target":"enemy",
+            "firstCooldownTime":"1",
+            "cooldownTime":{"1":"20", "10": "16"},
+            "radius":"2.5",
+            "effect":{
+                "fireOfRate":{"1":"25", "10":"40"},
+                "movementSpeed":{"1":"30", "10":"50"},
+                "time":{"1":"2.5", "10":"4"}}},
+        "aura":{
+            "target":"ar", "effect":{
+                "fireOfRate":{"1":"12", "5":"12"},
+                "hit":{"1":"30", "5":"30"}},
+            "grid":[
+                {"x":"-1", "y":"1"},
+                {"x":"-1", "y":"-1"}]}},
     {"id":"138", "name":"6P62", "type":"ar", "rarity":"3",
         "hp":{"1":"61", "100":"121"},
         "dmg":{"1":"24", "100":"69"},
@@ -3049,7 +3167,30 @@
                 {"x":"-1", "y":"0"},
                 {"x":"-1", "y":"-1"},
                 {"x":"0", "y":"-1"}]}},
-    {"id":"00145", "name":"OTs-44", "type":"rf", "rarity":"3",
+    {"id":"144", "name":"MT-9", "type":"smg", "rarity":"3",
+        "hp":{"1":"102", "100":"203"},
+        "dmg":{"1":"10", "100":"25"},
+        "dodge":{"1":"9", "100":"60"},
+        "hit":{"1":"2", "100":"13"},
+        "fireOfRate":{"1":"63", "100":"88"},
+        "skill":{
+            "name":"Stun Grenade",
+            "type":"debuff",
+            "target":"enemy",
+            "firstCooldownTime":"5",
+            "cooldownTime":{"1":"20", "10": "16"},
+            "radius":"2.5",
+            "effect":{
+                "stun":{"1":"1", "10":"1"},
+                "time":{"1":"2", "10":"3.5"}}},
+        "aura":{
+            "target":"ar", "effect":{
+                "dmg":{"1":"10", "5":"10"},
+                "dodge":{"1":"12", "5":"12"}},
+            "grid":[
+                {"x":"-1", "y":"1"},
+                {"x":"-1", "y":"-1"}]}},
+    {"id":"145", "name":"OTs-44", "type":"rf", "rarity":"3",
         "hp":{"1":"40", "100":"80"},
         "dmg":{"1":"52", "100":"157"},
         "dodge":{"1":"4", "100":"32"},
@@ -3071,7 +3212,7 @@
             "grid":[
                 {"x":"1", "y":"1"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"00146", "name":"G28", "type":"rf", "rarity":"4",
+    {"id":"146", "name":"G28", "type":"rf", "rarity":"4",
         "hp":{"1":"44", "100":"88"},
         "dmg":{"1":"43", "100":"119"},
         "dodge":{"1":"4", "100":"29"},
@@ -3092,7 +3233,50 @@
             "grid":[
                 {"x":"0", "y":"1"},
                 {"x":"0", "y":"-1"}]}},
-    {"id":"00149", "name":"AEK-999", "type":"mg", "rarity":"4",
+    {"id":"147", "name":"SSG 69", "type":"rf", "rarity":"3",
+        "isUnreleased":true,
+        "hp":{"1":"40", "100":"80"},
+        "dmg":{"1":"47", "100":"130"},
+        "dodge":{"1":"5", "100":"39"},
+        "hit":{"1":"10", "100":"82"},
+        "fireOfRate":{"1":"20", "100":"30"},
+        "skill":{
+            "name":"Damage Focus",
+            "type":"buff",
+            "target":"self",
+            "firstCooldownTime":"5",
+            "cooldownTime":{"1":"10", "10": "8"},
+            "effect":{
+                "dmg":{"1":"35", "10":"60"},
+                "time":{"1":"3", "10":"5"}}},
+        "aura":{
+            "target":"hg", "effect":{
+                "cooldownTime":{"1":"12", "5":"12"}},
+            "grid":[
+                {"x":"1", "y":"0"}]}},
+    {"id":"148", "name":"IWS 2000", "type":"rf", "rarity":"5",
+        "hp":{"1":"44", "100":"88"},
+        "dmg":{"1":"55", "100":"162"},
+        "dodge":{"1":"4", "100":"29"},
+        "hit":{"1":"9", "100":"78"},
+        "fireOfRate":{"1":"21", "100":"32"},
+        "skill":{
+            "name":"Giant Eagle Assault",
+            "type":"buff",
+            "target":"self",
+            "firstCooldownTime":"6",
+            "cooldownTime":{"1":"20", "10": "16"},
+            "effect":{
+                "dmg":{"1":"80", "10":"180"},
+                "fireOfRate":{"1":"-20", "10":"-35"},
+                "time":{"1":"6", "10":"10"}}},
+        "aura":{
+            "target":"hg", "effect":{
+                "cooldownTime":{"1":"18", "5":"18"}},
+            "grid":[
+                {"x":"0", "y":"1"},
+                {"x":"0", "y":"-1"}]}},
+    {"id":"149", "name":"AEK-999", "type":"mg", "rarity":"4",
         "hp":{"1":"83", "100":"165"},
         "dmg":{"1":"34", "100":"89"},
         "dodge":{"1":"4", "100":"28"},
@@ -3122,7 +3306,55 @@
             "grid":[
                 {"x":"1", "y":"1"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"00152", "name":"M1897", "type":"sg", "rarity":"3",
+    {"id":"150", "name":"Shipka", "type":"smg", "rarity":"4",
+        "hp":{"1":"84", "100":"168"},
+        "dmg":{"1":"9", "100":"24"},
+        "dodge":{"1":"10", "100":"79"},
+        "hit":{"1":"2", "100":"14"},
+        "fireOfRate":{"1":"65", "100":"95"},
+        "skill":{
+            "name":"Evasion Focus",
+            "type":"buff",
+            "target":"self",
+            "firstCooldownTime":"6",
+            "cooldownTime":{"1":"10", "10": "8"},
+            "effect":{
+                "dodge":{"1":"70", "10":"130"},
+                "time":{"1":"3", "10":"5"}}},
+        "aura":{
+            "target":"ar", "effect":{
+                "fireOfRate":{"1":"15", "5":"15"},
+                "dodge":{"1":"10", "5":"10"}},
+            "grid":[
+                {"x":"-1", "y":"1"},
+                {"x":"-1", "y":"-1"}]}},
+    {"id":"151", "name":"M1887", "type":"sg", "rarity":"5",
+        "hp":{"1":138, "100":275},
+        "dmg":{"1":14, "100":39},
+        "dodge":{"1":2, "100":12},
+        "hit":{"1":2, "100":12},
+        "fireOfRate":{"1":15, "100":22},
+        "ammoCount":4,
+        "armor":{"1":3, "100":22},
+        "skill":{
+            "name":"Terminating Shot",
+            "firstCooldownTime":15,
+            "cooldownTime":{"1":20, "10":16},
+            "detailText":{
+                "0":"inflicts {0} damage to a single target,<br>and drive it back {1} units.",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":0, "attr":"knockingBack"}]},
+            "effects":[
+                {"filter":"active", "type":"attack", "target":"enemy", "allLinkDo":true, "fixedDmg":true, "value":{"1":100, "10":1000}, "knockingBack":{"1":2, "10":3}}
+            ]},
+        "aura":{
+            "target":"mg", "effect":{
+                "dmg":{"0":20},
+                "hit":{"0":20}},
+            "self":{"x":1, "y":0},
+            "grid":[
+                {"x":-1, "y":0}]}},
+    {"id":"152", "name":"M1897", "type":"sg", "rarity":"3",
+        "isUnreleased":true,
         "hp":{"1":"127", "100":"253"},
         "dmg":{"1":"14", "100":"35"},
         "dodge":{"1":"2", "100":"11"},
@@ -3320,7 +3552,8 @@
             "self":{"x":"1", "y":"1"},
             "grid":[
                 {"x":"-1", "y":"-1"}]}},
-    {"id":"00160", "name":"Saiga-12", "type":"sg", "rarity":"5",
+    {"id":"160", "name":"Saiga-12", "type":"sg", "rarity":"5",
+        "isUnreleased":true,
         "hp":{"1":"132", "100":"264"},
         "dmg":{"1":"12", "100":"29"},
         "dodge":{"1":"2", "100":"11"},
@@ -3329,7 +3562,7 @@
         "ammoCount":"5",
         "armor":{"1":"3", "100":"23"},
         "skill":{
-            "name":"巨羚號角",
+            "name":"Big Antelope's Horn",
             "type":"attack",
             "target":"enemy",
             "firstCooldownTime":"8",
@@ -3373,7 +3606,8 @@
                 {"x":"-1", "y":"1"},
                 {"x":"-1", "y":"0"},
                 {"x":"-1", "y":"-1"}]}},
-    {"id":"00162", "name":"SPAS-12", "type":"sg", "rarity":"4",
+    {"id":"162", "name":"SPAS-12", "type":"sg", "rarity":"4",
+        "isUnreleased":true,
         "hp":{"1":"138", "100":"275"},
         "dmg":{"1":"14", "100":"33"},
         "dodge":{"1":"2", "100":"9"},
@@ -3398,71 +3632,60 @@
             "grid":[
                 {"x":"-1", "y":"0"},
                 {"x":"-1", "y":"-1"}]}},
-    {"id":"00150", "name":"希普卡", "type":"smg", "rarity":"4",
-        "hp":{"1":"84", "100":"168"},
-        "dmg":{"1":"9", "100":"24"},
-        "dodge":{"1":"10", "100":"79"},
-        "hit":{"1":"2", "100":"14"},
-        "fireOfRate":{"1":"65", "100":"95"},
+    {"id":"163", "name":"AA-12", "type":"sg", "rarity":"5",
+        "isUnreleased": true,
+        "hp":{"1":135, "100":269},
+        "dmg":{"1":12, "100":30},
+        "dodge":{"1":2, "100":11},
+        "hit":{"1":2, "100":12},
+        "fireOfRate":{"1":27, "100":39},
+        "ammoCount":5,
+        "armor":{"1":3, "100":22},
         "skill":{
-            "name":"Evasion Focus",
-            "type":"buff",
-            "target":"self",
-            "firstCooldownTime":"6",
-            "cooldownTime":{"1":"10", "10": "8"},
-            "effect":{
-                "dodge":{"1":"70", "10":"130"},
-                "time":{"1":"3", "10":"5"}}},
+            "name":"Ketosis",
+            "firstCooldownTime":8,
+            "cooldownTime":{"1":20, "10": 16},
+            "detailText":{
+                "val":"Increase ammo by {1} and self rate of fire by {0}%.<br>Each attack's knockback chance is increased to {2}%. Duration {3} seconds.",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":2, "attr":"value"}, {"effectIndex":0, "attr":"time"}]
+            },
+            "effects":[
+                {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":35, "10":80}, "time":{"1":6, "10":8}},
+                {"filter":"active", "type":"buff", "target":"self","attribute":"ammoCount", "value":{"1":5, "10":10}, "toFixedCount": 1},
+                {"value":{"1":7, "10":10}}
+            ]},
         "aura":{
-            "target":"ar", "effect":{
-                "fireOfRate":{"1":"15", "5":"15"},
-                "dodge":{"1":"10", "5":"10"}},
+            "target":"mg", "effect":{
+                "dmg":{"0":22}},
+            "self":{"x":1, "y":0},
             "grid":[
-                {"x":"-1", "y":"1"},
-                {"x":"-1", "y":"-1"}]}},
-    {"id":"00147", "name":"SSG 69", "type":"rf", "rarity":"3",
-        "hp":{"1":"40", "100":"80"},
-        "dmg":{"1":"47", "100":"130"},
-        "dodge":{"1":"5", "100":"39"},
-        "hit":{"1":"10", "100":"82"},
-        "fireOfRate":{"1":"20", "100":"30"},
-        "skill":{
-            "name":"Damage Focus",
-            "type":"buff",
-            "target":"self",
-            "firstCooldownTime":"5",
-            "cooldownTime":{"1":"10", "10": "8"},
+                {"x":-1, "y":-1},
+                {"x":-1, "y":0}]}},
+    {"id":"165", "name":"M1014", "type":"sg", "rarity":"4",
+        "hp":{"1":138, "100":275},
+        "dmg":{"1":12, "100":31},
+        "dodge": {"1": 2,"100": 11},
+        "hit": {"1": 2,"100": 12},
+        "fireOfRate": {"1": 22,"100": 32},
+        "ammoCount": 4,
+        "armor": {"1": 3,"100": 21},
+        "skill": {
+            "name": "Stress Allusion",
+            "firstCooldownTime": 10,
+            "cooldownTime": {
+                "1": 20,
+                "10": 16
+            },
             "effect":{
-                "dmg":{"1":"35", "10":"60"},
-                "time":{"1":"3", "10":"5"}}},
-        "aura":{
-            "target":"hg", "effect":{
-                "cooldownTime":{"1":"12", "5":"12"}},
-            "grid":[
-                {"x":"1", "y":"0"}]}},
-    {"id":"144", "name":"MT-9", "type":"smg", "rarity":"3",
-        "hp":{"1":"102", "100":"203"},
-        "dmg":{"1":"10", "100":"25"},
-        "dodge":{"1":"9", "100":"60"},
-        "hit":{"1":"2", "100":"13"},
-        "fireOfRate":{"1":"63", "100":"88"},
-        "skill":{
-            "name":"Stun Grenade",
-            "type":"debuff",
-            "target":"enemy",
-            "firstCooldownTime":"5",
-            "cooldownTime":{"1":"20", "10": "16"},
-            "radius":"2.5",
-            "effect":{
-                "stun":{"1":"1", "10":"1"},
-                "time":{"1":"2", "10":"3.5"}}},
-        "aura":{
-            "target":"ar", "effect":{
-                "dmg":{"1":"10", "5":"10"},
-                "dodge":{"1":"12", "5":"12"}},
-            "grid":[
-                {"x":"-1", "y":"1"},
-                {"x":"-1", "y":"-1"}]}},
+                "dmg": {"1": 20,"10": 50},
+                "armor": {"1": 15,"10": 30},
+                "time": {"1": 6,"10": 8}}},
+        "aura": {
+            "target": "mg","effect": {
+                "dmg": {"1": "20","5": "20"}},
+            "grid": [
+                {"x": "-2","y": "-2"},
+                {"x": "-2","y": "0"}]}},
     {"id":"166", "name":"CZ-75", "type":"hg", "rarity":"5",
         "hp":{"1":"33", "100":"66"},
         "dmg":{"1":"12", "100":"34"},
@@ -3487,58 +3710,14 @@
                 {"x":"0", "y":"1"},
                 {"x":"-1", "y":"-1"},
                 {"x":"0", "y":"-1"}]}},
-    {"id":"170", "name":"ASh-12.7", "type":"ar", "rarity":"3",
-        "hp":{"1":"55", "100":"110"},
-        "dmg":{"1":"22", "100":"65"},
-        "dodge":{"1":"4", "100":"36"},
-        "hit":{"1":"5", "100":"41"},
-        "fireOfRate":{"1":"39", "100":"59"},
-        "skill":{
-            "name":"Annihilation Focus",
-            "type":"buff",
-            "target":"self",
-            "firstCooldownTime":"6",
-            "cooldownTime":{"1":"10", "10": "8"},
-            "effect":{
-                "dmg":{"1":"25", "10":"50"},
-                "criRate":{"1":"25", "10":"50"},
-                "time":{"1":"3", "10":"5"}}},
-        "aura":{
-            "target":"smg", "effect":{
-                "dmg":{"1":"30", "5":"30"}},
-            "grid":[
-                {"x":"1", "y":"1"},
-                {"x":"1", "y":"-1"}]}},
-    {"id":"148", "name":"IWS 2000", "type":"rf", "rarity":"5",
-        "hp":{"1":"44", "100":"88"},
-        "dmg":{"1":"55", "100":"162"},
-        "dodge":{"1":"4", "100":"29"},
-        "hit":{"1":"9", "100":"78"},
-        "fireOfRate":{"1":"21", "100":"32"},
-        "skill":{
-            "name":"巨鷹攻勢",
-            "type":"buff",
-            "target":"self",
-            "firstCooldownTime":"6",
-            "cooldownTime":{"1":"20", "10": "16"},
-            "effect":{
-                "dmg":{"1":"80", "10":"180"},
-                "fireOfRate":{"1":"-20", "10":"-35"},
-                "time":{"1":"6", "10":"10"}}},
-        "aura":{
-            "target":"hg", "effect":{
-                "cooldownTime":{"1":"18", "5":"18"}},
-            "grid":[
-                {"x":"0", "y":"1"},
-                {"x":"0", "y":"-1"}]}},
-    {"id":"00167", "name":"HK45", "type":"hg", "rarity":"3",
+    {"id":"167", "name":"HK45", "type":"hg", "rarity":"3",
         "hp":{"1":"33", "100":"66"},
         "dmg":{"1":"13", "100":"34"},
         "dodge":{"1":"11", "100":"80"},
         "hit":{"1":"8", "100":"58"},
         "fireOfRate":{"1":"38", "100":"55"},
         "skill":{
-            "name":"強襲號令",
+            "name":"Raid Command",
             "type":"buff",
             "target":"ally",
             "firstCooldownTime":"6",
@@ -3555,7 +3734,7 @@
                 {"x":"1", "y":"1"},
                 {"x":"-1", "y":"-1"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"00168", "name":"Spitfire", "type":"hg", "rarity":"4",
+    {"id":"168", "name":"Spitfire", "type":"hg", "rarity":"4",
         "hp":{"1":"35", "100":"70"},
         "dmg":{"1":"12", "100":"33"},
         "dodge":{"1":"9", "100":"71"},
@@ -3580,14 +3759,59 @@
                 {"x":"1", "y":"1"},
                 {"x":"-1", "y":"-1"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"00171", "name":"利貝羅勒", "type":"ar", "rarity":"4",
+    {"id":"169", "name":"SCW", "type":"smg", "rarity":"3",
+        "isUnreleased":true,
+        "hp":{"1":"84", "100":"168"},
+        "dmg":{"1":"12", "100":"30"},
+        "dodge":{"1":"10", "100":"68"},
+        "hit":{"1":"2", "100":"12"},
+        "fireOfRate":{"1":"65", "100":"91"},
+        "skill":{
+            "name":"機動專注",
+            "type":"buff",
+            "target":"self",
+            "firstCooldownTime":"6",
+            "cooldownTime":{"1":"10", "10": "8"},
+            "effect":{
+                "dmg":{"1":"100", "10":"150"},
+                "dodge":{"1":"25", "10":"40"},
+                "time":{"1":"3", "10":"5"}}},
+        "aura":{
+            "target":"ar", "effect":{
+                "dmg":{"1":"6", "5":"6"},
+                "fireOfRate":{"1":"10", "5":"10"}},
+            "grid":[
+                {"x":"-1", "y":"0"}]}},
+    {"id":"170", "name":"ASh-12.7", "type":"ar", "rarity":"3",
+        "hp":{"1":"55", "100":"110"},
+        "dmg":{"1":"22", "100":"65"},
+        "dodge":{"1":"4", "100":"36"},
+        "hit":{"1":"5", "100":"41"},
+        "fireOfRate":{"1":"39", "100":"59"},
+        "skill":{
+            "name":"Annihilation Focus",
+            "type":"buff",
+            "target":"self",
+            "firstCooldownTime":"6",
+            "cooldownTime":{"1":"10", "10": "8"},
+            "effect":{
+                "dmg":{"1":"25", "10":"50"},
+                "criRate":{"1":"25", "10":"50"},
+                "time":{"1":"3", "10":"5"}}},
+        "aura":{
+            "target":"smg", "effect":{
+                "dmg":{"1":"30", "5":"30"}},
+            "grid":[
+                {"x":"1", "y":"1"},
+                {"x":"1", "y":"-1"}]}},
+    {"id":"171", "name":"Ribeyrolles", "type":"ar", "rarity":"4",
         "hp":{"1":"55", "100":"110"},
         "dmg":{"1":"21", "100":"64"},
         "dodge":{"1":"5", "100":"40"},
         "hit":{"1":"5", "100":"44"},
         "fireOfRate":{"1":"41", "100":"63"},
         "skill":{
-            "name":"猩紅迴響",
+            "name":"Crimson Encore",
             "type":"buff",
             "target":"self_aura_grid",
             "firstCooldownTime":"6",
@@ -3603,7 +3827,7 @@
             "grid":[
                 {"x":"0", "y":"1"},
                 {"x":"0", "y":"-1"}]}},
-    {"id":"00172", "name":"RFB", "type":"ar", "rarity":"5",
+    {"id":"172", "name":"RFB", "type":"ar", "rarity":"5",
         "hp":{"1":"55", "100":"105"},
         "dmg":{"1":"21", "100":"69"},
         "dodge":{"1":"5", "100":"49"},
@@ -3611,7 +3835,7 @@
         "fireOfRate":{"1":"34", "100":"54"},
         "criRate":"30",
         "skill":{
-            "name":"至高槍彈",
+            "name":"Ammo Supremacy",
             "type":"buff",
             "target":"self",
             "firstCooldownTime":"6",
@@ -3654,28 +3878,30 @@
                 {"x":"1", "y":"1"},
                 {"x":"1", "y":"0"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"00169", "name":"SCW", "type":"smg", "rarity":"3",
-        "hp":{"1":"84", "100":"168"},
-        "dmg":{"1":"12", "100":"30"},
-        "dodge":{"1":"10", "100":"68"},
-        "hit":{"1":"2", "100":"12"},
-        "fireOfRate":{"1":"65", "100":"91"},
+    {"id":"174", "name":"Type 81R", "type":"rf", "rarity":"3",
+        "displayName":"Type 81R",
+        "hp":{"1":"38", "100":"75"},
+        "dmg":{"1":"43", "100":"123"},
+        "dodge":{"1":"5", "100":"41"},
+        "hit":{"1":"10", "100":"79"},
+        "fireOfRate":{"1":"21", "100":"32"},
         "skill":{
-            "name":"機動專注",
+            "name":"Assault Focus N",
             "type":"buff",
             "target":"self",
-            "firstCooldownTime":"6",
+            "firstCooldownTime":"8",
             "cooldownTime":{"1":"10", "10": "8"},
             "effect":{
-                "dmg":{"1":"100", "10":"150"},
-                "dodge":{"1":"25", "10":"40"},
+                "fireOfRate":{"1":"16", "10":"30"},
+                "time":{"1":"3", "10":"5"}},
+            "effectNight":{
+                "fireOfRate":{"1":"50", "10":"90"},
                 "time":{"1":"3", "10":"5"}}},
         "aura":{
-            "target":"ar", "effect":{
-                "dmg":{"1":"6", "5":"6"},
-                "fireOfRate":{"1":"10", "5":"10"}},
+            "target":"hg", "effect":{
+                "cooldownTime":{"1":"12", "5":"12"}},
             "grid":[
-                {"x":"-1", "y":"0"}]}},
+                {"x":"1", "y":"-1"}]}},
     {"id":"175", "name":"ART556", "type":"ar", "rarity":"5",
         "hp":{"1":"58", "100":"116"},
         "dmg":{"1":"18", "100":"53"},
@@ -3699,30 +3925,8 @@
             "grid":[
                 {"x":"1", "y":"1"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"00174", "name":"八一式馬", "type":"rf", "rarity":"3",
-        "hp":{"1":"38", "100":"75"},
-        "dmg":{"1":"43", "100":"123"},
-        "dodge":{"1":"5", "100":"41"},
-        "hit":{"1":"10", "100":"79"},
-        "fireOfRate":{"1":"21", "100":"32"},
-        "skill":{
-            "name":"Assault Focus N",
-            "type":"buff",
-            "target":"self",
-            "firstCooldownTime":"8",
-            "cooldownTime":{"1":"10", "10": "8"},
-            "effect":{
-                "fireOfRate":{"1":"16", "10":"30"},
-                "time":{"1":"3", "10":"5"}},
-            "effectNight":{
-                "fireOfRate":{"1":"50", "10":"90"},
-                "time":{"1":"3", "10":"5"}}},
-        "aura":{
-            "target":"hg", "effect":{
-                "cooldownTime":{"1":"12", "5":"12"}},
-            "grid":[
-                {"x":"1", "y":"-1"}]}},
-    {"id":"00176", "name":"TMP", "type":"smg", "rarity":"3",
+    {"id":"176", "name":"TMP", "type":"smg", "rarity":"3",
+        "isUnreleased":true,
         "hp":{"1":"75", "100":"150"},
         "dmg":{"1":"11", "100":"28"},
         "dodge":{"1":"11", "100":"77"},
@@ -3745,7 +3949,31 @@
             "grid":[
                 {"x":"-1", "y":"1"},
                 {"x":"-1", "y":"-1"}]}},
-    {"id":"00178", "name":"F1", "type":"smg", "rarity":"3",
+    {"id":"177", "name":"KLIN", "type":"smg", "rarity":"4",
+        "isUnreleased":true,
+        "hp":{"1":"96", "100":"190"},
+        "dmg":{"1":"10", "100":"25"},
+        "dodge":{"1":"11", "100":"74"},
+        "hit":{"1":"2", "100":"11"},
+        "fireOfRate":{"1":"68", "100":"95"},
+        "skill":{
+            "name":"Incendiary Grenade",
+            "type":"attack",
+            "target":"enemy",
+            "firstCooldownTime":"3",
+            "cooldownTime":{"1":"20", "10": "16"},
+            "radius":"1.5",
+            "effect":{
+                "attack":{"1":"3.2", "10":"6.5"},
+                "attackDot":{"1":"0.5", "10":"1", "everyTime":"0.33"},
+                "time":{"1":"2", "10":"5"}}},
+        "aura":{
+            "target":"ar", "effect":{
+                "fireOfRate":{"1":"25", "5":"25"}},
+            "grid":[
+                {"x":"-1", "y":"0"}]}},
+    {"id":"178", "name":"F1", "type":"smg", "rarity":"3",
+        "isUnreleased":true,
         "hp":{"1":"106", "100":"212"},
         "dmg":{"1":"10", "100":"26"},
         "dodge":{"1":"8", "100":"60"},
@@ -3769,29 +3997,8 @@
             "grid":[
                 {"x":"-1", "y":"1"},
                 {"x":"-1", "y":"-1"}]}},
-    {"id":"00177", "name":"KLIN", "type":"smg", "rarity":"4",
-        "hp":{"1":"96", "100":"190"},
-        "dmg":{"1":"10", "100":"25"},
-        "dodge":{"1":"11", "100":"74"},
-        "hit":{"1":"2", "100":"11"},
-        "fireOfRate":{"1":"68", "100":"95"},
-        "skill":{
-            "name":"Incendiary Grenade",
-            "type":"attack",
-            "target":"enemy",
-            "firstCooldownTime":"3",
-            "cooldownTime":{"1":"20", "10": "16"},
-            "radius":"1.5",
-            "effect":{
-                "attack":{"1":"3.2", "10":"6.5"},
-                "attackDot":{"1":"0.5", "10":"1", "everyTime":"0.33"},
-                "time":{"1":"2", "10":"5"}}},
-        "aura":{
-            "target":"ar", "effect":{
-                "fireOfRate":{"1":"25", "5":"25"}},
-            "grid":[
-                {"x":"-1", "y":"0"}]}},
-    {"id":"00179", "name":"DSR-50", "type":"rf", "rarity":"5",
+    {"id":"179", "name":"DSR-50", "type":"rf", "rarity":"5",
+        "isUnreleased":true,
         "hp":{"1":"41", "100":"82"},
         "dmg":{"1":"53", "100":"163"},
         "dodge":{"1":"4", "100":"33"},
@@ -3814,7 +4021,8 @@
             "grid":[
                 {"x":"0", "y":"0"},
                 {"x":"1", "y":"0"}]}},
-    {"id":"00180", "name":"PzB39", "type":"rf", "rarity":"4",
+    {"id":"180", "name":"PzB39", "type":"rf", "rarity":"4",
+        "isUnreleased":true,
         "hp":{"1":"42", "100":"84"},
         "dmg":{"1":"50", "100":"148"},
         "dodge":{"1":"4", "100":"31"},
@@ -3836,59 +4044,7 @@
             "grid":[
                 {"x":"0", "y":"1"},
                 {"x":"0", "y":"-1"}]}},
-    {"id":"00102", "name":"UMP40", "type":"smg", "rarity":"4",
-        "hp":{"1":"90", "100":"180"},
-        "dmg":{"1":"10", "100":"27"},
-        "dodge":{"1":"10", "100":"75"},
-        "hit":{"1":"2", "100":"14"},
-        "fireOfRate":{"1":"59", "100":"85"},
-        "skill":{
-            "name":"烙印超載",
-            "type":"activeWithPassive",
-            "target":"self",
-            "firstCooldownTime":"1",
-            "cooldownTime":{"1":"666", "10": "666"},
-            "detailText":{
-                "val":"未釋放技能時<br> 每2秒回避上升{0}% 傷害下降{1}% 最多疊加5層。<br> 主動效果:清空當前所有被動效果，釋放後每2秒傷害上升{2}%，回避下降{3}% 最多疊加5層。"
-                },
-            "stack":5,
-            "effect":{
-                "dodge":{"1":"10", "10":"10", "type":"buff", "stackMax":"5", "stackUpWhenEveryTime":"2", "name":"102_p"},
-                "dmg":{"1":"-5", "10":"-5", "type":"buff", "stackMax":"5", "stackUpWhenEveryTime":"2", "name":"102_p"},
-                "time":{"1":"0", "10":"0"}},
-            "effect2":{
-                "dmg":{"1":"20", "10":"30", "type":"buff", "stackMax":"5", "stackUpWhenEveryTime":"2", "cleanBuff":"102_p"},
-                "dodge":{"1":"-20", "10":"-25", "type":"buff", "stackMax":"5", "stackUpWhenEveryTime":"2", "cleanBuff":"102_p"},
-                "time":{"1":"0", "10":"0"}}},
-        "aura":{
-            "target":"smg", "effect":{
-                "criRate":{"1":"500", "5":"500"}},
-            "grid":[
-                {"x":"0", "y":"1"},
-                {"x":"1", "y":"1"},
-                {"x":"0", "y":"-1"},
-                {"x":"1", "y":"-1"}]}},
-    {"id":"00182", "name":"wz.29", "type":"rf", "rarity":"3",
-        "hp":{"1":"49", "100":"97"},
-        "dmg":{"1":"43", "100":"113"},
-        "dodge":{"1":"5", "100":"33"},
-        "hit":{"1":"9", "100":"65"},
-        "fireOfRate":{"1":"22", "100":"32"},
-        "skill":{
-            "name":"Assault Focus",
-            "type":"buff",
-            "target":"self",
-            "firstCooldownTime":"6",
-            "cooldownTime":{"1":"10", "10": "8"},
-            "effect":{
-                "fireOfRate":{"1":"35", "10":"60"},
-                "time":{"1":"3", "10":"5"}}},
-        "aura":{
-            "target":"hg", "effect":{
-                "cooldownTime":{"1":"12", "5":"12"}},
-            "grid":[
-                {"x":"1", "y":"1"}]}},
-    {"id":"00181", "name":"T91", "type":"ar", "rarity":"5",
+    {"id":"181", "name":"T91", "type":"ar", "rarity":"5",
         "hp":{"1":"62", "100":"124"},
         "dmg":{"1":"19", "100":"51"},
         "dodge":{"1":"6", "100":"46"},
@@ -3916,14 +4072,69 @@
             "grid":[
                 {"x":"1", "y":"1"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"00184", "name":"T-5000", "type":"rf", "rarity":"4",
+    {"id":"182", "name":"wz.29", "type":"rf", "rarity":"3",
+        "isUnreleased":true,
+        "hp":{"1":"49", "100":"97"},
+        "dmg":{"1":"43", "100":"113"},
+        "dodge":{"1":"5", "100":"33"},
+        "hit":{"1":"9", "100":"65"},
+        "fireOfRate":{"1":"22", "100":"32"},
+        "skill":{
+            "name":"Assault Focus",
+            "type":"buff",
+            "target":"self",
+            "firstCooldownTime":"6",
+            "cooldownTime":{"1":"10", "10": "8"},
+            "effect":{
+                "fireOfRate":{"1":"35", "10":"60"},
+                "time":{"1":"3", "10":"5"}}},
+        "aura":{
+            "target":"hg", "effect":{
+                "cooldownTime":{"1":"12", "5":"12"}},
+            "grid":[
+                {"x":"1", "y":"1"}]}},
+    {"id":"183", "name":"Contender", "type":"hg", "rarity":"5",
+        "hp":{"1":"33", "100":"66"},
+        "dmg":{"1":"14", "100":"46"},
+        "dodge":{"1":"9", "100":"82"},
+        "hit":{"1":"9", "100":"85"},
+        "fireOfRate":{"1":"27", "100":"44"},
+        "criRate":"40",
+        "skill":{
+            "name":"Inquisitor's Bullet",
+            "type":"attack",
+            "target":"enemy",
+            "firstCooldownTime":"6",
+            "cooldownTime":{"1":"15", "10": "12"},
+            "prepareTime":"1",
+            "detailText":{
+                "val":"After taking aim for 1 second, shoots a special bullet that inflicts {0}x the damage towards the enemy, amplifying the damage received by {1}% and setting it as the target of focus fire for {2}s. Depending on whether Contender is in the front/middle/back column, it will target the enemy that's the furthest/highest hp/closest correspondingly. If a boss is present, it will target the boss first."
+            },
+            "effect":{
+                "attack":{"1":"1.5", "10":"3"},
+                "reducedDamage":{"1":"25", "10":"40", "type":"debuff"},
+                "time":{"1":"3", "10":"5"}}},
+        "aura":{
+            "target":"all", "effect":{
+                "dmg":{"1":"15", "5":"30"},
+                "criRate":{"1":"10", "5":"20"}},
+            "grid":[
+                {"x":"-1", "y":"1"},
+                {"x":"0", "y":"1"},
+                {"x":"1", "y":"1"},
+                {"x":"-1", "y":"0"},
+                {"x":"1", "y":"0"},
+                {"x":"-1", "y":"-1"},
+                {"x":"0", "y":"-1"},
+                {"x":"1", "y":"-1"}]}},
+    {"id":"184", "name":"T-5000", "type":"rf", "rarity":"4",
         "hp":{"1":"45", "100":"90"},
         "dmg":{"1":"46", "100":"126"},
         "dodge":{"1":"4", "100":"28"},
         "hit":{"1":"11", "100":"85"},
         "fireOfRate":{"1":"24", "100":"36"},
         "skill":{
-            "name":"鎖定專注",
+            "name":"Lock-on Focus",
             "type":"buff",
             "target":"self",
             "firstCooldownTime":"6",
@@ -3938,7 +4149,7 @@
             "grid":[
                 {"x":"0", "y":"1"},
                 {"x":"1", "y":"1"}]}},
-    {"id":"00185", "name":"阿梅利", "type":"mg", "rarity":"4",
+    {"id":"185", "name":"Ameli", "type":"mg", "rarity":"4",
         "hp":{"1":"71", "100":"141"},
         "dmg":{"1":"26", "100":"83"},
         "dodge":{"1":"5", "100":"42"},
@@ -3968,99 +4179,32 @@
                 {"x":"1", "y":"1"},
                 {"x":"1", "y":"0"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"00183", "name":"競爭者", "type":"hg", "rarity":"5",
-        "hp":{"1":"33", "100":"66"},
-        "dmg":{"1":"14", "100":"46"},
-        "dodge":{"1":"9", "100":"82"},
-        "hit":{"1":"9", "100":"85"},
-        "fireOfRate":{"1":"27", "100":"44"},
-        "criRate":"40",
+    {"id":"186", "name":"P226", "type":"hg", "rarity":"3",
+        "isUnreleased":true,
+        "hp":{"1":"37", "100":"73"},
+        "dmg":{"1":"11", "100":"29"},
+        "dodge":{"1":"9", "100":"63"},
+        "hit":{"1":"8", "100":"58"},
+        "fireOfRate":{"1":"42", "100":"61"},
         "skill":{
-            "name":"斷罪者魔彈",
-            "type":"attack",
-            "target":"enemy",
+            "name":"Assault Suppression",
+            "type":"debuff",
+            "target":"enemy_all",
             "firstCooldownTime":"6",
             "cooldownTime":{"1":"15", "10": "12"},
-            "prepareTime":"1",
-            "detailText":{
-                "val":"經過1秒的瞄準後射出一顆特製子彈<br>造成{0}倍傷害<br>附加{1}%傷害加深<br>並使其成為我方集火目標<br>持續{2}秒。當競爭者位於前/中/後排時會變更技能目標，分別瞄準最遠/當前血量最高/最近的敵人<br>BOSS存在時則優先瞄準BOSS。"
-                },
             "effect":{
-                "attack":{"1":"1.5", "10":"3"},
-                "reducedDamage":{"1":"25", "10":"40", "type":"debuff"},
-                "time":{"1":"3", "10":"5"}}},
+                "fireOfRate":{"1":"15", "10":"25"},
+                "time":{"1":"5", "2":"6", "3":"6", "4":"6", "5":"7", "6":"7", "7":"7", "8":"8", "9":"8", "10":"8"}}},
         "aura":{
             "target":"all", "effect":{
-                "dmg":{"1":"15", "5":"30"},
-                "criRate":{"1":"10", "5":"20"}},
+                "dmg":{"1":"10", "5":"20"},
+                "hit":{"1":"25", "5":"50"}},
             "grid":[
-                {"x":"-1", "y":"1"},
                 {"x":"0", "y":"1"},
-                {"x":"1", "y":"1"},
-                {"x":"-1", "y":"0"},
                 {"x":"1", "y":"0"},
-                {"x":"-1", "y":"-1"},
-                {"x":"0", "y":"-1"},
-                {"x":"1", "y":"-1"}]}},
-    {"id":"1001", "name":"Noel", "type":"hg", "rarity":"extra",
-        "hp":{"1":"30", "100":"60"},
-        "dmg":{"1":"14", "100":"39"},
-        "dodge":{"1":"10", "100":"82"},
-        "hit":{"1":"8", "100":"60"},
-        "fireOfRate":{"1":"44", "100":"65"},
-        "skill":{
-            "name":"Zero Gun/Fenrir",
-            "type":"attack",
-            "target":"enemy",
-            "firstCooldownTime":"6",
-            "cooldownTime":{"1":"15", "10": "12"},
-            "detailText":{
-                "val":"Dash towards the enemy,<br>inflicts {0}x damage for 8 hits within a small area."
-                },
-            "effect":{
-                "attack":{"1":"0.6", "10":"1.2", "attackSkillTimes":"8"},
-                "time":{"1":"", "10":""}}},
-        "aura":{
-            "target":"all", "effect":{
-                "fireOfRate":{"1":"15", "5":"30"},
-                "dodge":{"1":"10", "5":"20"}},
-            "grid":[
-                {"x":"-1", "y":"1"},
-                {"x":"0", "y":"1"},
-                {"x":"1", "y":"1"},
-                {"x":"-1", "y":"-1"},
-                {"x":"0", "y":"-1"},
-                {"x":"1", "y":"-1"}]}},
-    {"id":"1002", "name":"愛爾菲特", "type":"sg", "rarity":"extra",
-        "hp":{"1":"138", "100":"275"},
-        "dmg":{"1":"15", "100":"36"},
-        "dodge":{"1":"2", "100":"9"},
-        "hit":{"1":"2", "100":"13"},
-        "fireOfRate":{"1":"20", "100":"28"},
-        "ammoCount":"5",
-        "armor":{"1":"3", "100":"23"},
-        "skill":{
-            "name":"壓軸甜點",
-            "type":"attack",
-            "target":"enemy",
-            "firstCooldownTime":"10",
-            "cooldownTime":{"1":"20", "10": "16"},
-            "detailText":{
-                "val":"造成{0}倍的傷害並鎖定目標<br>隨後發射導彈<br>對目標周圍1.5範圍內的敵人造成{1}倍的傷害。"
-                },
-            "effect":{
-                "attack":{"1":"4", "10":"8"},
-                "attack2":{"1":"6", "10":"12", "radius":"1.5"},
-                "time":{"1":"", "10":""}}},
-        "aura":{
-            "target":"mg", "effect":{
-                "dmg":{"1":"15", "5":"15"},
-                "hit":{"1":"15", "5":"15"}},
-            "self":{"x":"1", "y":"0"},
-            "grid":[
-                {"x":"-1", "y":"1"},
-                {"x":"-1", "y":"-1"}]}},
-    {"id":"00187", "name":"Ak 5", "type":"ar", "rarity":"4",
+                {"x":"0", "y":"-1"}]}},
+    {"id":"187", "name":"Ak 5", "type":"ar", "rarity":"4",
+        "isUnreleased":true,
         "hp":{"1":"58", "100":"116"},
         "dmg":{"1":"19", "100":"51"},
         "dodge":{"1":"5", "100":"38"},
@@ -4091,13 +4235,13 @@
         "ammoCount":"4",
         "armor":{"1":"3", "100":"22"},
         "skill":{
-            "name":"堅壁理論",
+            "name":"Theory of Fortification",
             "type":"buff",
             "target":"ally",
             "firstCooldownTime":"2",
             "cooldownTime":{"1":"12", "10": "8"},
             "detailText":{
-                "val":"給戰鬥中位於第一排的我方人形增加能吸收{0}點傷害的護盾<br>持續{1}秒。"
+                "val":"Grants a shield to all T-dolls on the front row that can take a total of {0} damage for {1} seconds."
                 },
             "effect":{
                 "shield":{"1":"12", "10":"35"},
@@ -4111,29 +4255,32 @@
                 {"x":"-1", "y":"1"},
                 {"x":"-1", "y":"0"},
                 {"x":"-1", "y":"-1"}]}},
-    {"id":"00186", "name":"P226", "type":"hg", "rarity":"3",
-        "hp":{"1":"37", "100":"73"},
-        "dmg":{"1":"11", "100":"29"},
-        "dodge":{"1":"9", "100":"63"},
-        "hit":{"1":"8", "100":"58"},
-        "fireOfRate":{"1":"42", "100":"61"},
+    {"id":"189", "name":"USAS-12", "type":"sg", "rarity":"4",
+        "hp":{"1":130, "100":260},
+        "dmg":{"1":12, "100":29},
+        "dodge":{"1":2, "100":10},
+        "hit":{"1":2, "100":11},
+        "fireOfRate":{"1":26, "100":37},
+        "ammoCount":5,
+        "armor":{"1":3, "100":22},
         "skill":{
-            "name":"Assault Suppression",
-            "type":"debuff",
-            "target":"enemy_all",
-            "firstCooldownTime":"6",
-            "cooldownTime":{"1":"15", "10": "12"},
-            "effect":{
-                "fireOfRate":{"1":"15", "10":"25"},
-                "time":{"1":"5", "2":"6", "3":"6", "4":"6", "5":"7", "6":"7", "7":"7", "8":"8", "9":"8", "10":"8"}}},
+            "name":"Frenzied Assault",
+            "firstCooldownTime":1,
+            "cooldownTime":{"1":20, "10": 16},
+            "detailText":{
+                "val":"Increases rate of fire by {1}% for {0} seconds and clip size by {2}, but reload time increases by 1 second."},
+            "effects":[
+                {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":32, "10":60}, "time":{"1":6, "10":8}},
+                {"filter":"active", "type":"buff", "target":"self","attribute":"ammoCount", "value":{"1":1, "2":2, "5":2, "6":3, "9":3, "10":4}},
+                {"filter":"active", "type":"buff", "target":"self","attribute":"changeAmmoTime", "value":{"0":1}}
+            ]},
         "aura":{
-            "target":"all", "effect":{
-                "dmg":{"1":"10", "5":"20"},
-                "hit":{"1":"25", "5":"50"}},
+            "target":"mg", "effect":{
+                "dmg":{"0":12},
+                "hit":{"0":15}},
+            "self":{"x":1, "y":0},
             "grid":[
-                {"x":"0", "y":"1"},
-                {"x":"1", "y":"0"},
-                {"x":"0", "y":"-1"}]}},
+                {"x":-1, "y":-1}]}},
     {"id":"190", "name":"NS2000", "type":"sg", "rarity":"3",
         "hp":{"1":"127", "100":"253"},
         "dmg":{"1":"13", "100":"33"},
@@ -4159,33 +4306,55 @@
             "grid":[
                 {"x":"-1", "y":"1"},
                 {"x":"-1", "y":"-1"}]}},
-    {"id":"1004", "name":"雷电芽衣", "type":"rf", "rarity":"extra", "version":"cn",
-        "hp":{"1":"42", "100":"84"},
-        "dmg":{"1":"52", "100":"146"},
-        "dodge":{"1":"4", "100":"32"},
-        "hit":{"1":"9", "100":"70"},
-        "fireOfRate":{"1":"23", "100":"34"},
+    {"id": "191", "name":"M12", "type":"hg", "rarity":"3",
+        "hp":{"1":"84", "100":"203"},
+        "dmg":{"1":"10", "100":"26"},
+        "dodge":{"1":"10", "100":"64"},
+        "hit":{"1":"2", "100":"15"},
+        "fireOfRate":{"1":"52", "100":"76"},
         "skill":{
-            "name":"超电磁狙击",
+            "name":"Incendiary Grenade",
             "type":"attack",
-            "target":"enemy",
+            "target":"enemy_farthest",
+            "firstCooldownTime":"3",
+            "cooldownTime":{"1":"20", "10": "16"},
+            "prepareTime":"2",
+            "effect":{
+                "attack":{"1":"3", "10":"6"},
+                "attackDot":{"1":"0.5", "10":"1", "everyTime":"0.33"},
+                "time":{"1":"2", "10":"5"}}},
+        "aura":{
+            "target":"ar", "effect":{
+                "dmg":{"1":"8", "5":"8"},
+                "dodge":{"1":"8", "5":"8"}},
+            "grid":[
+                {"x":"-1", "y":"1"},
+                {"x":"-1", "y":"0"},
+                {"x":"-1", "y":"-1"}]}},
+    {"id":"192", "name":"JS05", "type":"rf", "rarity":"5",
+        "hp":{"1":"45", "100":"90"},
+        "dmg":{"1":"52", "100":"158"},
+        "dodge":{"1":"4", "100":"32"},
+        "hit":{"1":"10", "100":"88"},
+        "fireOfRate":{"1":"20", "100":"31"},
+        "skill":{
+            "name":"貫通射擊",
+            "type":"attack",
+            "target":"enemy_farthest",
             "firstCooldownTime":"6",
             "cooldownTime":{"1":"20", "10": "16"},
-            "prepareTime":"1.5",
-            "detailText":{
-                "val":"进行1.5秒的瞄准,对最远目标造成{0}倍的伤害，同时在{1}秒内对目标附加麻痹（无法移动和攻击）效果。"
-                },
+            "prepareTime":"2",
             "effect":{
-                "attack":{"1":"2.5", "10":"5"},
-                "paralysis":{"1":"1", "10":"1"},
-                "time":{"1":"1.5", "10":"3"}}},
+                "attack":{"1":"0.9", "9":"1.8", "10":"2", "extraToTarget":{"1":"0.9", "9":"1.8", "10":"2"}},
+                "time":{"1":"", "10":""}}},
         "aura":{
             "target":"hg", "effect":{
                 "cooldownTime":{"1":"18", "5":"18"}},
             "grid":[
-                {"x":"0", "y":"-1"},
+                {"x":"1", "y":"1"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"00193", "name":"T65", "type":"ar", "rarity":"3",
+    {"id":"193", "name":"T65", "type":"ar", "rarity":"3",
+        "isUnreleased":true,
         "hp":{"1":"62", "100":"124"},
         "dmg":{"1":"20", "100":"54"},
         "dodge":{"1":"5", "100":"40"},
@@ -4212,372 +4381,8 @@
             "grid":[
                 {"x":"1", "y":"0"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"192", "name":"JS05", "type":"rf", "rarity":"5",
-        "hp":{"1":"45", "100":"90"},
-        "dmg":{"1":"52", "100":"158"},
-        "dodge":{"1":"4", "100":"32"},
-        "hit":{"1":"10", "100":"88"},
-        "fireOfRate":{"1":"20", "100":"31"},
-        "skill":{
-            "name":"貫通射擊",
-            "type":"attack",
-            "target":"enemy_farthest",
-            "firstCooldownTime":"6",
-            "cooldownTime":{"1":"20", "10": "16"},
-            "prepareTime":"2",
-            "effect":{
-                "attack":{"1":"0.9", "9":"1.8", "10":"2", "extraToTarget":{"1":"0.9", "9":"1.8", "10":"2"}},
-                "time":{"1":"", "10":""}}},
-        "aura":{
-            "target":"hg", "effect":{
-                "cooldownTime":{"1":"18", "5":"18"}},
-            "grid":[
-                {"x":"1", "y":"1"},
-                {"x":"1", "y":"-1"}]}},
-    {"id":"00197", "name":"卡爾卡諾M1891", "type":"rf", "rarity":"5",
-        "hp":{"1":"40", "100":"80"},
-        "dmg":{"1":"45", "100":"138"},
-        "dodge":{"1":"6", "100":"42"},
-        "hit":{"1":"13", "100":"85"},
-        "fireOfRate":{"1":"22", "100":"34"},
-        "skill":{
-            "name":"瑪爾斯號角",
-            "type":"buff",
-            "target":"self",
-            "everyAttackChance":"40",
-            "firstCooldownTime":"6",
-            "cooldownTime":{"1":"10", "10": "8"},
-            "detailText":{
-                "val":"主動:使用後<br>隊伍中每存在一組步槍人形<br>自身暴擊與射速提升{0}%<br>持續{1}秒。被動：攻擊有40%機率使同列所有我方人形暴擊與射速提升{2}%<br>持續2秒(疊加上限3層)."
-                },
-            "stack":3,
-            "effect":{
-                "criRate":{"1":"5", "10":"8", "multiplyByTypeCount": "rf"},
-                "fireOfRate":{"1":"5", "10":"8", "multiplyByTypeCount": "rf"},
-                "time":{"1":"5", "10":"7.5"}},
-            "passive":{
-                "name":"瑪爾斯號角p",
-                "howOccur":"attack",
-                "type":"buff",
-                "target":"self_column_grid",
-                "effect":{
-                    "criRate":{"1":"2", "10":"4", "initStack":"1", "stackMax":"3"},
-                    "fireOfRate":{"1":"2", "10":"4", "initStack":"1", "stackMax":"3"},
-                "time":{"1":"2", "10":"2"}}}},
-        "aura":{
-            "target":"rf", "effect":{
-                "cooldownTime":{"1":"10", "5":"10"}},
-            "self":{"x":"-1", "y":"-1"},
-            "grid":[
-                {"x":"-1", "y":"0"},
-                {"x":"-1", "y":"1"}]}},
-    {"id":"00196", "name":"Zas M21", "type":"ar", "rarity":"5",
-        "hp":{"1":61, "100":121},
-        "dmg":{"1":19, "100":55},
-        "dodge":{"1":5, "100":41},
-        "hit":{"1":6, "100":48},
-        "fireOfRate":{"1":49, "100":74},
-        "skill":{
-            "name":"夜梟轟鳴",
-            "firstCooldownTime":4,
-            "cooldownTime":{"1":20, "10": 16},
-            "detailText":{
-                "val":"發射榴彈對半徑2.5範圍內的敵人造成{0}%的傷害<br>若命中3個及以上單位則對目標附加{1}%的增傷效果<br>持續{2}秒;若命中3個以下敵人則提升自身傷害{3}%<br>持續{4}秒。"},
-            "effects":[
-                {"filter":"active", "type":"attack", "target":"enemy", "radius":2.5, "allLinkDo":false, "value":{"1":1.2, "10":3}},
-                {"filter":"activeAttacked", "countGreaterOrEqual":3, "type":"debuff", "target":"enemyActiveAttacked",
-                    "attribute":"reducedDamage", "value":{"1":10, "10":15}, "time":{"1":2, "10":3}},
-                {"filter":"activeAttacked", "countLess":3, "type":"buff", "target":"self", "attribute":"dmg", "value":{"1":40, "10":60}, "time":{"1":5, "10":8}}
-            ]},
-        "aura":{
-            "target":"smg", "effect":{
-                "fireOfRate":{"0":12},
-                "dodge":{"0":15}},
-            "grid":[
-                {"x":1, "y":-1},
-                {"x":1, "y":1}]}},
-    {"id":"189", "name":"USAS-12", "type":"sg", "rarity":"4",
-        "hp":{"1":130, "100":260},
-        "dmg":{"1":12, "100":29},
-        "dodge":{"1":2, "100":10},
-        "hit":{"1":2, "100":11},
-        "fireOfRate":{"1":26, "100":37},
-        "ammoCount":5,
-        "armor":{"1":3, "100":22},
-        "skill":{
-            "name":"狂熱突襲",
-            "firstCooldownTime":1,
-            "cooldownTime":{"1":20, "10": 16},
-            "detailText":{
-                "val":"{0}秒內提升攻速{1}%<br>並裝彈量增加{2}發<br>但該輪射擊後第一次換彈時間延長1秒。"},
-            "effects":[
-                {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":32, "10":60}, "time":{"1":6, "10":8}},
-                {"filter":"active", "type":"buff", "target":"self","attribute":"ammoCount", "value":{"1":1, "2":2, "5":2, "6":3, "9":3, "10":4}},
-                {"filter":"active", "type":"buff", "target":"self","attribute":"changeAmmoTime", "value":{"0":1}}
-            ]},
-        "aura":{
-            "target":"mg", "effect":{
-                "dmg":{"0":12},
-                "hit":{"0":15}},
-            "self":{"x":1, "y":0},
-            "grid":[
-                {"x":-1, "y":-1}]}},
-    {"id":"00203", "name":"密獾", "type":"smg", "rarity":"4",
-        "hp":{"1":99, "100":198},
-        "dmg":{"1":14, "100":33},
-        "dodge":{"1":10, "100":60},
-        "hit":{"1":2, "100":13},
-        "fireOfRate":{"1":60, "100":82},
-        "skill":{
-            "name":"Mobility Focus",
-            "firstCooldownTime":6,
-            "cooldownTime":{"1":10, "10": 8},
-            "detailText":{
-                "val":"[Buff] own damage by {0}% and evasion by {1}% for {2} seconds."},
-            "effects":[
-                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":110, "10":160}, "time":{"1":3, "10":5}},
-                {"filter":"active", "type":"buff", "target":"self","attribute":"dodge", "value":{"1":25, "10":40}, "time":{"1":3, "10":5}}
-            ]},
-        "aura":{
-            "target":"ar", "effect":{
-                "dmg":{"0":20},
-                "criRate":{"0":20}},
-            "self":{"x":0, "y":-1},
-            "grid":[
-                {"x":-1, "y":-1},
-                {"x":-1, "y":1}]}},
-    {"id":"00207", "name":"CZ2000", "type":"ar", "rarity":"4",
-        "hp":{"1":55, "100":110},
-        "dmg":{"1":18, "100":48},
-        "dodge":{"1":6, "100":46},
-        "hit":{"1":6, "100":44},
-        "fireOfRate":{"1":54, "100":78},
-        "skill":{
-            "name":"黎明氣焰",
-            "firstCooldownTime":4,
-            "cooldownTime":{"1":20, "10":16},
-            "detailText":{
-                "val":"日戰提升傷害{0}%和暴擊{1}%,夜戰提升命中{2}%和射速{3}%,持續{4}秒"},
-            "effects":[
-                {"filter":"active", "environment":"day", "type":"buff", "target":"self", "attribute":"dmg", "value":{"1":40, "10":65}, "time":{"1":6, "10":10}},
-                {"filter":"active", "environment":"day", "type":"buff", "target":"self", "attribute":"criRate", "value":{"1":15, "10":25}, "time":{"1":6, "10":10}},
-                {"filter":"active", "environment":"night", "type":"buff", "target":"self", "attribute":"hit", "value":{"1":30, "10":40}, "time":{"1":6, "10":10}},
-                {"filter":"active", "environment":"night", "type":"buff", "target":"self", "attribute":"fireOfRate", "value":{"1":30, "10":50}, "time":{"1":6, "10":10}}
-            ]},
-        "aura":{
-            "target":"smg", "effect":{
-                "fireOfRate":{"0":10},
-                "dodge":{"0":15}},
-            "grid":[
-                {"x":1, "y":0}]}},
-    {"id":"20055", "name":"M4A1", "type":"ar", "rarity":"5", "mod":true,
-        "hp":{"mod1":112, "mod2":113, "mod3":113},
-        "dmg":{"mod1":50, "mod2":50, "mod3":50},
-        "dodge":{"mod1":49, "mod2":49, "mod3":50},
-        "hit":{"mod1":49, "mod2":49, "mod3":50},
-        "fireOfRate":{"mod1":80, "mod2":80, "mod3":80},
-        "skill":{
-            "name":"Damage Focus T",
-            "firstCooldownTime":4,
-            "cooldownTime":{"1":20, "10": 16},
-            "detailText":{
-                "val":"提升自身火力{0}%,持續{1}秒"},
-            "effects":[
-                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":45, "10":75}, "time":{"1":6, "10":10}}
-            ]},
-        "mod2Skill":{
-            "name":"伸冤者印記",
-            "detailText":{
-                "val":"開啟火力專注期間會對目標附加伸冤者印記<br>當我方場上單位數量為3及以下時, 以攻速降低70%為代價,<br>每次普攻對目標造成{0}%的傷害,同時對2.5範圍內的目標<br>附加印記並造成100%的濺射傷害(期間火力專注仍然有效) "},
-            "effects":[
-                {"filter":"active", "allyCountLessOrEqualFilter":3, "type":"debuff", "target":"self", "attribute":"fireOfRate", "value":{"0":70}, "untilBuffEnd":"Damage Focus T"},
-                {"filter":"attackReplace", "buffFilter":"伸冤者印記", "type":"attack", "target":"enemy", "certainToHit":true, "ignoreArmor":true, "canCri":false, "value":{"1":3, "10":6}, "toFixedCount":2},
-                {"filter":"attackAttacked", "buffFilter":"Damage Focus T", "type":"debuff", "target":"enemyAttackAttacked", "attribute":"dmg", "value":{"0":0}},
-                {"filter":"attack", "buffFilter":"伸冤者印記", "type":"attack", "target":"enemy", "radius":2.5, "allLinkDo":false, "value":{"0":1}}
-            ]},
-        "aura":{
-            "target":"ar", "effect":{
-                "dmg":{"0":20},
-                "criRate":{"0":32}},
-            "grid":[
-                {"x":0, "y":1},
-                {"x":1, "y":1},
-                {"x":1, "y":0},
-                {"x":0, "y":-1},
-                {"x":1, "y":-1}]}},
-				
-	{"id":"20039", "name":"莫辛-納甘", "type":"rf", "rarity":"5", "mod":true,
-        "hp":{"mod1":90, "mod2":90, "mod3":91},
-        "dmg":{"mod1":134, "mod2":135, "mod3":136},
-        "dodge":{"mod1":39, "mod2":39, "mod3":40},
-        "hit":{"mod1":87, "mod2":88, "mod3":89},
-        "fireOfRate":{"mod1":31, "mod2":31, "mod3":31},
-        "skill":{
-            "name":"沉穩射擊",
-            "type":"attack",
-            "target":"enemy_farthest",
-            "firstCooldownTime":"10",
-            "cooldownTime":{"1":"20", "10": "16"},
-            "prepareTime":"1.5",
-            "effect":{
-                "attack":{"1":"3.2", "10":"6.5"},
-                "time":{"1":"", "10":""}}},
-		"mod2Skill":{
-            "name":"蒼白收割者",
-            "detailText":{
-                "val":"普通攻擊擊殺敵人後提升自身傷害{2}%,持續{1}秒<br>技能擊殺敵人後提升自身射速{0}%"},
-            "effects":[
-                {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":15, "10":30}, "time":{"1":3, "10":3}},
-				{"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":0, "10":0}, "time":{"1":3, "10":3}}
-            ]},
-        "aura":{
-            "target":"hg", "effect":{
-                "cooldownTime":{"1":"18", "5":"18"}},
-            "grid":[
-                {"x":"0", "y":"1"}]}},			
-    {"id":"20057", "name":"ST AR-15", "type":"ar", "rarity":"5", "mod":true,
-        "hp":{"mod1":106, "mod2":107, "mod3":108},
-        "dmg":{"mod1":49, "mod2":49, "mod3":50},
-        "dodge":{"mod1":51, "mod2":51, "mod3":52},
-        "hit":{"mod1":54, "mod2":54, "mod3":55},
-        "fireOfRate":{"mod1":78, "mod2":78, "mod3":78},
-        "skill":{
-            "name":"Assault Focus T",
-            "firstCooldownTime":4,
-            "cooldownTime":{"1":20, "10": 16},
-            "detailText":{
-                "val":"提升自身射速{0}%,持續{1}秒"},
-            "effects":[
-                {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":30, "10":50}, "time":{"1":9, "10":15}}
-            ]},
-        "mod2Skill":{
-            "name":"罪與罰",
-            "detailText":{
-                "val":"開啟突擊專注時會使用主副武器同時攻擊,<br>副武器造成{0}%的傷害,對受伸冤者印記影響的目標造成{1}%的傷害"},
-            "effects":[
-                {"filter":"attack", "buffFilter":"Assault Focus T", "type":"attack", "target":"enemy", "targetNotWithBuff":"伸冤者印記", "value":{"1":0.05, "10":0.1}, "toFixedCount":2},
-                {"filter":"attack", "buffFilter":"Assault Focus T", "type":"attack", "target":"enemy", "targetWithBuff":"伸冤者印記", "value":{"1":0.1, "10":0.2}, "toFixedCount":2}
-            ]},
-        "aura":{
-            "target":"smg", "effect":{
-                "fireOfRate":{"0":10},
-                "dodge":{"0":15}},
-            "grid":[
-                {"x":1, "y":1},
-                {"x":1, "y":0},
-                {"x":1, "y":-1}]}},
-    {"id":"20051", "name":"FN-49", "type":"rf", "rarity":"4", "mod":true,
-        "hp":{"mod1":94, "mod2":95, "mod3":95},
-        "dmg":{"mod1":118, "mod2":119, "mod3":120},
-        "dodge":{"mod1":33, "mod2":33, "mod3":33},
-        "hit":{"mod1":62, "mod2":63, "mod3":64},
-        "fireOfRate":{"mod1":34, "mod2":34, "mod3":34},
-        "skill":{
-            "name":"Damage Focus",
-            "firstCooldownTime":5,
-            "cooldownTime":{"1":10, "10": 8},
-            "detailText":{
-                "0":"提升自身火力{0}%,持續{1}秒",
-                "format":[{"textIndex":0, "effectIndex":0, "attr":"value"}, {"textIndex":1, "effectIndex":0, "attr":"time"}]},
-            "effects":[
-                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":40, "10":65}, "time":{"1":3, "10":5}}
-            ]},
-        "mod2Skill":{
-            "name":"凜冽鬥志",
-            "detailText":{
-                "0":"火力專注發動時會額外提升射速{0}%,持續{1}秒",
-                "format":[{"textIndex":0, "effectIndex":0, "attr":"value"}, {"textIndex":1, "effectIndex":0, "attr":"time"}]},
-            "effects":[
-                {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":6, "10":15}, "time":{"1":3, "10":5}}
-            ]},
-        "aura":{
-            "target":"hg", "effect":{
-                "cooldownTime":{"0":15}},
-            "grid":[
-                {"x":1, "y":1},
-                {"x":1, "y":-1}]}},
-    {"id":"00205", "name":"AN-94", "type":"ar", "rarity":"5",
-        "hp":{"1":58, "100":116},
-        "dmg":{"1":18, "100":55},
-        "dodge":{"1":6, "100":48},
-        "hit":{"1":9, "100":67},
-        "fireOfRate":{"1":48, "100":76},
-        "skill":{
-            "name":"人偶板機",
-            "firstCooldownTime":6,
-            "cooldownTime":{"1":10, "10":8},
-            "detailText":{
-                "0":"變更攻擊目標時會造成兩次傷害。<br>開啟技能期間每次攻擊都會造成兩次傷害,持續{0}秒",
-                "format":[{"textIndex":0, "effectIndex":0, "attr":"time"}]},
-            "effects":[
-                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"0":0}, "time":{"1":3, "10":5}},
-                {"filter":"attack", "buffFilter":"人偶板機", "type":"attack", "target":"enemy", "value":{"0":1}}
-            ]},
-        "aura":{
-            "target":"smg", "effect":{
-                "hit":{"0":55},
-                "dodge":{"0":16}},
-            "self":{"x":0, "y":-1},
-            "grid":[
-                {"x":1, "y":1},
-                {"x":1, "y":0},
-                {"x":1, "y":-1}]}},
-    {"id":"0206", "name":"AK-12", "type":"ar", "rarity":"5",
-        "hp":{"1":55, "100":110},
-        "dmg":{"1":20, "100":56},
-        "dodge":{"1":8, "100":52},
-        "hit":{"1":9, "100":62},
-        "fireOfRate":{"1":50, "100":78},
-        "skill":{
-            "name":"雪狼之眼",
-            "firstCooldownTime":6,
-            "cooldownTime":{"1":10, "10":8},
-            "detailText":{
-                "0":"提升{0}%火力,射速,命中和暴擊率,持續{1}秒",
-                "format":[{"textIndex":0, "effectIndex":0, "attr":"value"}, {"textIndex":1, "effectIndex":0, "attr":"time"}]},
-            "effects":[
-                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":15, "10":35}, "time":{"1":3, "10":5}},
-                {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":15, "10":35}, "time":{"1":3, "10":5}},
-                {"filter":"active", "type":"buff", "target":"self","attribute":"hit", "value":{"1":15, "10":35}, "time":{"1":3, "10":5}},
-                {"filter":"active", "type":"buff", "target":"self","attribute":"criRate", "value":{"1":15, "10":35}, "time":{"1":3, "10":5}}
-            ]},
-        "aura":{
-            "target":"smg", "effect":{
-                "dmg":{"0":25},
-                "fireOfRate":{"0":15}},
-            "self":{"x":0, "y":1},
-            "grid":[
-                {"x":1, "y":1},
-                {"x":1, "y":0},
-                {"x":1, "y":-1}]}},
-    {"id":"0028", "name":"MP7", "type":"smg", "rarity":"5",
-        "hp":{"1":99, "100":198},
-        "dmg":{"1":13, "100":30},
-        "hit":{"1":3, "100":13},
-        "dodge":{"1":12, "100":69},
-        "fireOfRate":{"1":65, "100":91},
-        "skill":{
-            "name":"Moon Dancer",
-            "firstCooldownTime":6,
-            "cooldownTime":{"1":10, "10":8},
-            "detailText":{
-                "0":"Reduce own ROF by {0}%, increase evasion by {2}% and speed by {1} lasts {3} seconds.",
-                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":2, "attr":"value"}, {"effectIndex":3, "attr":"value"}, {"effectIndex":3, "attr":"time"}]},
-            "effects":[
-                {"filter":"active", "type":"debuff", "target":"self","attribute":"fireOfRate", "value":{"1":40, "10":20}, "time":{"1":3, "10":5}},
-                {"filter":"active", "type":"debuff", "target":"self","attribute":"hit", "value":{"1":40, "10":20}, "time":{"1":3, "10":5}},
-                {"filter":"active", "type":"buff", "target":"self","attribute":"movementSpeed", "value":{"1":30, "10":50}, "time":{"1":3, "10":5}},
-                {"filter":"active", "type":"buff", "target":"self","attribute":"dodge", "value":{"1":100, "10":180}, "time":{"1":3, "10":5}}
-            ]},
-        "aura":{
-            "target":"ar", "effect":{
-                "fireOfRate":{"0":15},
-                "hit":{"0":25}},
-            "grid":[
-                {"x":-1, "y":1},
-                {"x":-1, "y":0},
-                {"x":-1, "y":-1}]}},
-    {"id":"00194", "name":"K2", "type":"ar", "rarity":"5",
+    {"id":"194", "name":"K2", "type":"ar", "rarity":"5",
+        "isUnreleased":true,
         "hp":{"1":64, "100":127},
         "dmg":{"1":19, "100":50},
         "hit":{"1":7, "100":51},
@@ -4610,7 +4415,406 @@
             "grid":[
                 {"x":1, "y":1},
                 {"x":1, "y":-1}]}},
-    {"id":"00210", "name":"CZ52", "type":"hg", "rarity":"3",
+    {"id":"195", "name":"HK23", "type":"mg", "rarity":"3",
+        "isUnreleased":true,
+        "hp":{"1":"75", "100":"149"},
+        "dmg":{"1":"28", "100":"80"},
+        "dodge":{"1":"4", "100":"34"},
+        "hit":{"1":"4", "100":"34"},
+        "fireOfRate":{"1":"90", "100":"135"},
+        "ammoCount":"9",
+        "skill":{
+            "name":"蓄勢待發",
+            "type":"buff",
+            "target":"self",
+            "firstCooldownTime":"8",
+            "cooldownTime":{"1":"18", "10": "18"},
+            "effect":{
+                "dmg":{"1":"18", "10":"30"},
+                "ammoCount":{"1":"1", "10":"3"},
+                "time":{"1":"6", "10":"8"}}},
+        "aura":{
+            "target":"sg", "effect":{
+                "dmg":{"1":"8", "5":"8"},
+                "armor":{"1":"12", "5":"12"}},
+            "self":{"x":"-1", "y":"0"},
+            "grid":[
+                {"x":"1", "y":"0"},
+                {"x":"1", "y":"-1"}]}},
+    {"id":"196", "name":"Zas M21", "type":"ar", "rarity":"5",
+        "hp":{"1":61, "100":121},
+        "dmg":{"1":19, "100":55},
+        "dodge":{"1":5, "100":41},
+        "hit":{"1":6, "100":48},
+        "fireOfRate":{"1":49, "100":74},
+        "skill":{
+            "name":"Howl of the Nightingale",
+            "firstCooldownTime":4,
+            "cooldownTime":{"1":20, "10": 16},
+            "detailText":{
+                "val":"Launches a grenade that deals {0}% damage to enemies within a 2.5 unit radius. If more than three enemy units are hit, they will take {1}% extra damage for {2} seconds. If fewer than three enemy units hits, Zas gains a damage buff of {3}% for {4} seconds."
+            },
+            "effects":[
+                {"filter":"active", "type":"attack", "target":"enemy", "radius":2.5, "allLinkDo":false, "value":{"1":1.2, "10":3}},
+                {"filter":"activeAttacked", "countGreaterOrEqual":3, "type":"debuff", "target":"enemyActiveAttacked",
+                    "attribute":"reducedDamage", "value":{"1":10, "10":15}, "time":{"1":2, "10":3}},
+                {"filter":"activeAttacked", "countLess":3, "type":"buff", "target":"self", "attribute":"dmg", "value":{"1":40, "10":60}, "time":{"1":5, "10":8}}
+            ]},
+        "aura":{
+            "target":"smg", "effect":{
+                "fireOfRate":{"0":12},
+                "dodge":{"0":15}},
+            "grid":[
+                {"x":1, "y":-1},
+                {"x":1, "y":1}]}},
+    {"id":"197", "name":"Carcano M1891", "type":"rf", "rarity":"5",
+        "displayName":"Carcano<br>M1891",
+        "hp":{"1":"40", "100":"80"},
+        "dmg":{"1":"45", "100":"138"},
+        "dodge":{"1":"6", "100":"42"},
+        "hit":{"1":"13", "100":"85"},
+        "fireOfRate":{"1":"22", "100":"34"},
+        "skill":{
+            "name":"War horn of Mars",
+            "type":"buff",
+            "target":"self",
+            "everyAttackChance":"40",
+            "firstCooldownTime":"6",
+            "cooldownTime":{"1":"10", "10": "8"},
+            "detailText":{
+                "val":"Active: Upon activation, increase own crit rate and rate of fire by {0}% for every RF unit present in the echelon, last for {1} seconds. Passive: When attacking, 40% chance to improve crit rate and rate of fire for T-Dolls standing on the same column by {2}%, last for 2 seconds, effect stacks up to 3 times."
+                },
+            "stack":3,
+            "effect":{
+                "criRate":{"1":"5", "10":"8", "multiplyByTypeCount": "rf"},
+                "fireOfRate":{"1":"5", "10":"8", "multiplyByTypeCount": "rf"},
+                "time":{"1":"5", "10":"7.5"}},
+            "passive":{
+                "name":"war_horn_of_mars_p",
+                "howOccur":"attack",
+                "type":"buff",
+                "target":"self_column_grid",
+                "effect":{
+                    "criRate":{"1":"2", "10":"4", "initStack":"1", "stackMax":"3"},
+                    "fireOfRate":{"1":"2", "10":"4", "initStack":"1", "stackMax":"3"},
+                "time":{"1":"2", "10":"2"}}}},
+        "aura":{
+            "target":"rf", "effect":{
+                "cooldownTime":{"1":"10", "5":"10"}},
+            "self":{"x":"-1", "y":"-1"},
+            "grid":[
+                {"x":"-1", "y":"0"},
+                {"x":"-1", "y":"1"}]}},
+    {"id":"198", "name":"Carcano M91/38", "type":"rf", "rarity":"5",
+        "displayName":"Carcano<br>M91/38",
+        "hp":{"1":37, "100":73},
+        "dmg":{"1":47, "100":146},
+        "hit":{"1":10, "100":90},
+        "dodge":{"1":5, "100":44},
+        "fireOfRate":{"1":22, "100":34},
+        "skill":{
+            "name":"Mask of Mors",
+            "firstCooldownTime":6,
+            "cooldownTime":{"1":10, "10":8},
+            "detailText":{
+                "0":"Active: Instantly gains {3} marks. Passive: When attacking, Carcano M91/38 has a {0}% chance to gain 2 marks. Upon reaching 18 marks, Carcano M91/38's next shot will deal {1}% damage to Elite/Boss units ({2}% damage to all other enemy types), and reset her marks to 0.",
+                "format":[{"effectIndex":1, "attr":"rate"}, {"effectIndex":3, "attr":"value", "percent":true}, {"effectIndex":4, "attr":"value", "percent":true}, {"effectIndex":5, "attr":"value"}]},
+            "effects":[
+                {"filter":"battleStart", "type":"buff", "target":"self","attribute":"dmg", "value":{"0":0}, "initStack":0},
+                {"filter":"preAttack", "buffFilter":"Mask of Mors", "type":"buffStackAdd", "target":"self","buffName":"Mask of Mors", "value":{"1":1, "6":1, "7":2, "10":2}, "rate":{"1":30, "6":55, "7":55, "10":70}},
+                {"filter":"activeAttacked", "buffFilter":"Mask of Mors", "buffFilterStackGreaterOrEqual":18, "type":"buffStackAdd", "target":"self","buffName":"Mask of Mors", "value":{"0":-99}},
+                {"filter":"otherActive", "buffFilter":"Mask of Mors", "buffFilterStackGreaterOrEqual":18, "type":"attack", "target":"enemy", "eliteTarget":true, "certainToHit":true, "ignoreArmor":true, "canCri":false, "value":{"1":1.8, "4":2.1, "5":2.25, "10":3}, "toFixedCount":2},
+                {"filter":"otherActive", "buffFilter":"Mask of Mors", "buffFilterStackGreaterOrEqual":18, "type":"attack", "target":"enemy", "eliteTarget":false, "certainToHit":true, "ignoreArmor":true, "canCri":false, "value":{"1":27, "4":31.5, "5":33.75, "10":45}, "toFixedCount":2},
+                {"filter":"active", "type":"buffStackAdd", "target":"self","buffName":"Mask of Mors", "value":{"1":12, "10":18}}
+            ]},
+        "aura":{
+            "target":"rf", "effect":{
+                "cooldownTime":{"0":10}},
+            "self":{"x":-1, "y":1},
+            "grid":[
+                {"x":-1, "y":0},
+                {"x":-1, "y":-1}]}},
+    {"id":"199", "name":"Type 80", "type":"mg", "rarity":"4",
+        "hp":{"1":87, "100":174},
+        "dmg":{"1":36, "100":93},
+        "hit":{"1":4, "100":26},
+        "dodge":{"1":4, "100":24},
+        "fireOfRate":{"1":83, "100":118},
+        "ammoCount":10,
+        "skill":{
+            "name":"Damage Focus MG",
+            "firstCooldownTime":8,
+            "cooldownTime":{"1":18, "10":18},
+            "detailText":{
+                "0":"Increases Type 80's damage by {0}% for {1} seconds.",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":25, "10":70}, "time":{"1":4, "10":6}}
+            ]},
+        "aura":{
+            "target":"sg", "effect":{
+                "dmg":{"0":10},
+                "hit":{"0":15}},
+            "self":{"x":-1, "y":1},
+            "grid":[
+                {"x":1, "y":-1},
+                {"x":1, "y":0}]}},
+    {"id":"200", "name":"XM3", "type":"rf", "rarity":"4",
+        "isUnreleased":true,
+        "hp":{"1":41, "100":82},
+        "dmg":{"1":45, "100":130},
+        "hit":{"1":11, "100":90},
+        "dodge":{"1":4, "100":32},
+        "fireOfRate":{"1":23, "100":35},
+        "skill":{
+            "name":"Assault Focus N",
+            "firstCooldownTime":8,
+            "cooldownTime":{"1":10, "10":8},
+            "detailText":{
+                "0":"夜間作戰時,提升自身射速{0}%(晝間衰減至{1}%),持續{2}秒",
+                "format":[{"effectIndex":1, "attr":"value"}, {"effectIndex":0, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "environment":"day", "type":"buff", "target":"self", "attribute":"fireOfRate", "value":{"1":18, "10":32}, "time":{"1":3, "10":5}},
+                {"filter":"active", "environment":"night", "type":"buff", "target":"self", "attribute":"fireOfRate", "value":{"1":55, "10":100}, "time":{"1":3, "10":5}}
+            ]},
+        "aura":{
+            "target":"hg", "effect":{
+                "cooldownTime":{"0":15}},
+            "grid":[
+                {"x":1, "y":-1},
+                {"x":1, "y":0}]}},
+    {"id":"201", "name":"Gepard M1", "type":"rf", "rarity":"3",
+        "isUnreleased":true,
+        "hp":{"1":44, "100":88},
+        "dmg":{"1":51, "100":143},
+        "hit":{"1":10, "100":77},
+        "dodge":{"1":4, "100":28},
+        "fireOfRate":{"1":20, "100":30},
+        "skill":{
+            "name":"Interdiction Shot",
+            "type":"attack",
+            "target":"enemy_nearest",
+            "firstCooldownTime":"15",
+            "cooldownTime":{"1":"20", "10": "16"},
+            "prepareTime":"2",
+            "effect":{
+                "attack":{"1":"3", "10":"6.5"},
+                "time":{"1":"", "10":""}}},
+        "aura":{
+            "target":"hg", "effect":{
+                "cooldownTime":{"0":12}},
+            "grid":[
+                {"x":1, "y":1},
+                {"x":1, "y":0}]}},
+    {"id":"202", "name":"Thunder", "type":"hg", "rarity":"4",
+        "isUnreleased":true,
+        "hp":{"1":43, "100":86},
+        "dmg":{"1":16, "100":46},
+        "hit":{"1":7, "100":57},
+        "dodge":{"1":7, "100":60},
+        "fireOfRate":{"1":24, "100":37},
+        "skill":{
+            "name":"Critical Point Shot",
+            "firstCooldownTime":4,
+            "cooldownTime":{"1":15, "10":12},
+            "detailText":{
+                "0":"Aims for 1 second and shoots the nearest enemy for {0}% damage.<br>This shot can be avoided, in that case, reload for 2 seconds and aim again.",
+                "format":[{"effectIndex":0, "attr":"value", "percent":true}]},
+            "effects":[
+                {"filter":"active", "type":"attack", "target":"enemy", "prepareTime":1, "postReloadTime":2, "allLinkDo":true, "value":{"1":8, "10":12}, "toFixedCount":1}
+            ]},
+        "aura":{
+            "target":"all", "effect":{
+                "dmg":{"1":18, "5":36}},
+            "grid":[
+                {"x":-1, "y":-1},
+                {"x":-1, "y":1},
+                {"x":1, "y":0}]}},
+    {"id":"203", "name":"Honey Badger", "type":"smg", "rarity":"4",
+        "isUnreleased":true,
+        "hp":{"1":99, "100":198},
+        "dmg":{"1":14, "100":33},
+        "dodge":{"1":10, "100":60},
+        "hit":{"1":2, "100":13},
+        "fireOfRate":{"1":60, "100":82},
+        "skill":{
+            "name":"Mobility Focus",
+            "firstCooldownTime":6,
+            "cooldownTime":{"1":10, "10": 8},
+            "detailText":{
+                "val":"[Buff] own damage by {0}% and evasion by {1}% for {2} seconds."},
+            "effects":[
+                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":110, "10":160}, "time":{"1":3, "10":5}},
+                {"filter":"active", "type":"buff", "target":"self","attribute":"dodge", "value":{"1":25, "10":40}, "time":{"1":3, "10":5}}
+            ]},
+        "aura":{
+            "target":"ar", "effect":{
+                "dmg":{"0":20},
+                "criRate":{"0":20}},
+            "self":{"x":0, "y":-1},
+            "grid":[
+                {"x":-1, "y":-1},
+                {"x":-1, "y":1}]}},
+    {"id":"204", "name":"Ballista", "type":"rf", "rarity":"5",
+        "isUnreleased":true,
+        "hp":{"1":41, "100":82},
+        "dmg":{"1":45, "100":139},
+        "hit":{"1":10, "100":92},
+        "dodge":{"1":4, "100":35},
+        "fireOfRate":{"1":23, "100":36},
+        "skill":{
+            "name":"Falcon Strike",
+            "firstCooldownTime":8,
+            "cooldownTime":{"1":20, "10":16},
+            "detailText":{
+                "0":"Passive: Periodically adds a stacking mark to the enemy every {0} seconds. Active: During the effect of Falcon Strike, attacks fire 1 additional round at the targeted enemy and consumes one mark. The effect lasts {1} seconds or until all marks have been consumed.",
+                "format":[{"effectIndex":0, "attr":"whenEveryXSeconds"}, {"effectIndex":1, "attr":"time"}]},
+            "effects":[
+                {"filter":"whenEveryXSeconds", "whenEveryXSeconds":{"1":3, "10":1.5}, "type":"debuff", "target":"enemy","attribute":"dmg", "value":{"0":0}},
+                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"0":0}, "time":{"1":4, "10":6}},
+                {"filter":"attack", "buffFilter":"Falcon Strike", "type":"attack", "target":"enemy", "targetWithBuff":"Falcon Strike", "value":{"0":1}},
+                {"filter":"attack", "buffFilter":"Falcon Strike", "type":"cleanBuff", "target":"enemy","buffName":"Falcon Strike", "value":{"0":0}}
+            ]},
+        "aura":{
+            "target":"hg", "effect":{
+                "cooldownTime":{"0":18}},
+            "grid":[
+                {"x":1, "y":-1},
+                {"x":1, "y":1}]}},
+    {"id":"205", "name":"AN-94", "type":"ar", "rarity":"5",
+        "isUnreleased":true,
+        "hp":{"1":58, "100":116},
+        "dmg":{"1":18, "100":55},
+        "dodge":{"1":6, "100":48},
+        "hit":{"1":9, "100":67},
+        "fireOfRate":{"1":48, "100":76},
+        "skill":{
+            "name":"Doll trigger",
+            "firstCooldownTime":6,
+            "cooldownTime":{"1":10, "10":8},
+            "detailText":{
+                "0":"Passive: Deals an extra hit when switching targets. Active: Deals an extra hit with every attack for {0} seconds.",
+                "format":[{"textIndex":0, "effectIndex":0, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"0":0}, "time":{"1":3, "10":5}},
+                {"filter":"attack", "buffFilter":"Doll trigger", "type":"attack", "target":"enemy", "value":{"0":1}}
+            ]},
+        "aura":{
+            "target":"smg", "effect":{
+                "hit":{"0":55},
+                "dodge":{"0":16}},
+            "self":{"x":0, "y":-1},
+            "grid":[
+                {"x":1, "y":1},
+                {"x":1, "y":0},
+                {"x":1, "y":-1}]}},
+    {"id":"206", "name":"AK-12", "type":"ar", "rarity":"5",
+        "isUnreleased":true,
+        "hp":{"1":55, "100":110},
+        "dmg":{"1":20, "100":56},
+        "dodge":{"1":8, "100":52},
+        "hit":{"1":9, "100":62},
+        "fireOfRate":{"1":50, "100":78},
+        "skill":{
+            "name":"Snow Wolf's Gaze",
+            "firstCooldownTime":6,
+            "cooldownTime":{"1":10, "10":8},
+            "detailText":{
+                "0":"Increases AK-12's damage, rate of fire, accuracy and critical hit rate by {0}% for {1} seconds.",
+                "format":[{"textIndex":0, "effectIndex":0, "attr":"value"}, {"textIndex":1, "effectIndex":0, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":15, "10":35}, "time":{"1":3, "10":5}},
+                {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":15, "10":35}, "time":{"1":3, "10":5}},
+                {"filter":"active", "type":"buff", "target":"self","attribute":"hit", "value":{"1":15, "10":35}, "time":{"1":3, "10":5}},
+                {"filter":"active", "type":"buff", "target":"self","attribute":"criRate", "value":{"1":15, "10":35}, "time":{"1":3, "10":5}}
+            ]},
+        "aura":{
+            "target":"smg", "effect":{
+                "dmg":{"0":25},
+                "fireOfRate":{"0":15}},
+            "self":{"x":0, "y":1},
+            "grid":[
+                {"x":1, "y":1},
+                {"x":1, "y":0},
+                {"x":1, "y":-1}]}},
+    {"id":"207", "name":"CZ2000", "type":"ar", "rarity":"4",
+        "isUnreleased":true,
+        "hp":{"1":55, "100":110},
+        "dmg":{"1":18, "100":48},
+        "dodge":{"1":6, "100":46},
+        "hit":{"1":6, "100":44},
+        "fireOfRate":{"1":54, "100":78},
+        "skill":{
+            "name":"Daybreak Exuberance",
+            "firstCooldownTime":4,
+            "cooldownTime":{"1":20, "10":16},
+            "detailText":{
+                "val":"During Daytime, increase damage by {0}% and crit rate by {1}%. During Night time, increase accuracy by {2}% and rate of fire by {3}%. Lasts {4} seconds."},
+            "effects":[
+                {"filter":"active", "environment":"day", "type":"buff", "target":"self", "attribute":"dmg", "value":{"1":40, "10":65}, "time":{"1":6, "10":10}},
+                {"filter":"active", "environment":"day", "type":"buff", "target":"self", "attribute":"criRate", "value":{"1":15, "10":25}, "time":{"1":6, "10":10}},
+                {"filter":"active", "environment":"night", "type":"buff", "target":"self", "attribute":"hit", "value":{"1":30, "10":40}, "time":{"1":6, "10":10}},
+                {"filter":"active", "environment":"night", "type":"buff", "target":"self", "attribute":"fireOfRate", "value":{"1":30, "10":50}, "time":{"1":6, "10":10}}
+            ]},
+        "aura":{
+            "target":"smg", "effect":{
+                "fireOfRate":{"0":10},
+                "dodge":{"0":15}},
+            "grid":[
+                {"x":1, "y":0}]}},
+    {"id":"208", "name":"HK21", "type":"mg", "rarity":"5",
+        "isUnreleased":true,
+        "hp":{"1":85, "100":169},
+        "dmg":{"1":32, "100":92},
+        "hit":{"1":4, "100":29},
+        "dodge":{"1":4, "100":33},
+        "fireOfRate":{"1":90, "100":135},
+        "ammoCount":10,
+        "skill":{
+            "name":"無差別崩壞",
+            "firstCooldownTime":8,
+            "cooldownTime":{"1":18, "10":18},
+            "detailText":{
+                "0":"提升裝彈量{0}<br>火力{1}%以及命中{2}%<br>同時進入掃射模式<br>每次攻擊都會切換攻擊目標<br>但移動速度下降50%<br>持續{3}秒。",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":2, "attr":"value"}, {"effectIndex":2, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "type":"buff", "target":"self", "attribute":"ammoCount", "value":{"1":1, "3":1, "4":2, "10":2}},
+                {"filter":"active", "type":"buff", "target":"self", "attribute":"dmg", "value":{"1":10, "10":40}, "time":{"1":6, "10":8}},
+                {"filter":"active", "type":"buff", "target":"self", "attribute":"hit", "value":{"1":15, "10":30}, "time":{"1":6, "10":8}}
+            ]},
+        "aura":{
+            "target":"sg", "effect":{
+                "dmg":{"0":15},
+                "armor":{"0":15}},
+            "self":{"x":-1, "y":0},
+            "grid":[
+                {"x":1, "y":1},
+                {"x":1, "y":0}]}},
+    {"id":"209", "name":"OTs-39", "type":"smg", "rarity":"3",
+        "isUnreleased":true,
+        "hp":{"1":96, "100":190},
+        "dmg":{"1":11, "100":27},
+        "hit":{"1":2, "100":14},
+        "dodge":{"1":10, "100":72},
+        "fireOfRate":{"1":52, "100":74},
+        "skill":{
+            "name":"Stun Grenade",
+            "firstCooldownTime":5,
+            "cooldownTime":{"1":20, "10":16},
+            "detailText":{
+                "0":"投擲閃光彈對半徑2.5範圍內的敵人造成持續{0}秒的暈眩",
+                "format":[{"effectIndex":0, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "type":"debuff", "target":"enemy","attribute":"stun", "value":{"0":1}, "time":{"1":2, "10":3.5}}
+            ]},
+        "aura":{
+            "target":"ar", "effect":{
+                "dmg":{"0":16}},
+            "grid":[
+                {"x":-1, "y":-1},
+                {"x":-1, "y":0}]}},
+    {"id":"210", "name":"CZ52", "type":"hg", "rarity":"3",
+        "isUnreleased":true,
         "hp":{"1":38, "100":76},
         "dmg":{"1":12, "100":33},
         "hit":{"1":7, "100":50},
@@ -4635,106 +4839,548 @@
                 {"x":0, "y":-1},
                 {"x":1, "y":1},
                 {"x":1, "y":-1}]}},
-    {"id":"00200", "name":"XM3", "type":"rf", "rarity":"4",
-        "hp":{"1":41, "100":82},
-        "dmg":{"1":45, "100":130},
-        "hit":{"1":11, "100":90},
-        "dodge":{"1":4, "100":32},
+    {"id":"211", "name":"SRS", "type":"rf", "rarity":"5",
+        "isUnreleased":true,
+        "hp":{"1":44, "100":87},
+        "dmg":{"1":46, "100":135},
+        "hit":{"1":10, "100":82},
+        "dodge":{"1":4, "100":35},
         "fireOfRate":{"1":23, "100":35},
         "skill":{
-            "name":"Assault Focus N",
-            "firstCooldownTime":8,
+            "name":"狩獵示範",
+            "firstCooldownTime":6,
             "cooldownTime":{"1":10, "10":8},
             "detailText":{
-                "0":"夜間作戰時,提升自身射速{0}%(晝間衰減至{1}%),持續{2}秒",
-                "format":[{"effectIndex":1, "attr":"value"}, {"effectIndex":0, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
+                "0":"提升自身火力{0}%和命中{1}%,持續{2}秒",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
             "effects":[
-                {"filter":"active", "environment":"day", "type":"buff", "target":"self", "attribute":"fireOfRate", "value":{"1":18, "10":32}, "time":{"1":3, "10":5}},
-                {"filter":"active", "environment":"night", "type":"buff", "target":"self", "attribute":"fireOfRate", "value":{"1":55, "10":100}, "time":{"1":3, "10":5}}
+                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":30, "10":60}, "time":{"1":3, "10":5}},
+                {"filter":"active", "type":"buff", "target":"self","attribute":"hit", "value":{"1":20, "10":40}, "time":{"1":3, "10":5}}
             ]},
         "aura":{
             "target":"hg", "effect":{
-                "cooldownTime":{"0":15}},
+                "cooldownTime":{"0":18}},
             "grid":[
-                {"x":1, "y":-1},
+                {"x":1, "y":1},
                 {"x":1, "y":0}]}},
-    {"id":"00201", "name":"獵豹M1", "type":"rf", "rarity":"3",
-        "hp":{"1":44, "100":88},
-        "dmg":{"1":51, "100":143},
-        "hit":{"1":10, "100":77},
-        "dodge":{"1":4, "100":28},
-        "fireOfRate":{"1":20, "100":30},
+    {"id":"212", "name":"K5", "type":"hg", "rarity":"4",
+        "isUnreleased":true,
+        "hp":{"1":33, "100":66},
+        "dmg":{"1":11, "100":29},
+        "hit":{"1":7, "100":52},
+        "dodge":{"1":11, "100":81},
+        "fireOfRate":{"1":43, "100":62},
         "skill":{
-            "name":"Interdiction Shot",
-            "firstCooldownTime":15,
+            "name":"戰地哲學館",
+            "firstCooldownTime":6,
+            "cooldownTime":{"1":15, "10":12},
+            "detailText":{
+                "0":"根據位於影響格上隊友的種類提升不同能力:手槍/衝鋒槍提升閃避{0}%<br>步槍/突擊步槍提升傷害{1}%<br>機槍/霰彈槍提升命中{2}%<br>持續{3}秒。",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":2, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "type":"buff", "target":"self_aura_grid", "targetTypes":["hg", "smg"], "attribute":"dodge", "value":{"1":20, "10":40}, "time":{"1":5, "10":8}},
+                {"filter":"active", "type":"buff", "target":"self_aura_grid", "targetTypes":["rf", "ar"], "attribute":"dmg", "value":{"1":10, "10":22}, "time":{"1":5, "10":8}},
+                {"filter":"active", "type":"buff", "target":"self_aura_grid", "targetTypes":["mg", "sg"], "attribute":"hit", "value":{"1":40, "10":80}, "time":{"1":5, "10":8}}
+            ]},
+        "aura":{
+            "target":"all", "effect":{
+                "dmg":{"1":15, "5":30},
+                "hit":{"1":20, "5":40}},
+            "grid":[
+                {"x":-1, "y":-1},
+                {"x":-1, "y":0},
+                {"x":-1, "y":1},
+                {"x":0, "y":-1},
+                {"x":0, "y":1},
+                {"x":1, "y":0}]}},
+    {"id":"213", "name":"C-MS", "type":"smg", "rarity":"5",
+        "isUnreleased":true,
+        "hp":{"1":93, "100":185},
+        "dmg":{"1":12, "100":32},
+        "hit":{"1":2, "100":15},
+        "dodge":{"1":10, "100":75},
+        "fireOfRate":{"1":60, "100":87},
+        "skill":{
+            "name":"心情連結",
+            "firstCooldownTime":1,
+            "cooldownTime":{"1":1, "10":1},
+            "detailText":{
+                "0":"點擊技能在不同彈藥間進行切換<br>每種彈藥提供不同的常駐狀態效果:亞音速彈(默認):提升回避{0}%/勺尖彈:提升火力{1}%/標準彈:提升命中{2}%",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":2, "attr":"value"}]},
+            "effects":[
+                {"filter":"battleStart", "name":"亞音速彈", "type":"buff", "target":"self", "attribute":"dodge", "value":{"1":30, "10":65}, "grouped":true, "indexGrouped":1},
+                {"filter":"battleStart", "name":"勺尖彈", "type":"buff", "target":"self", "attribute":"dmg", "value":{"1":40, "10":85}, "grouped":true, "indexGrouped":2},
+                {"filter":"battleStart", "name":"標準彈", "type":"buff", "target":"self", "attribute":"hit", "value":{"1":110, "10":200}, "grouped":true, "indexGrouped":3}
+            ]},
+        "aura":{
+            "target":"ar", "effect":{
+                "dmg":{"0":15},
+                "fireOfRate":{"0":5}},
+            "grid":[
+                {"x":-1, "y":-1},
+                {"x":-1, "y":1},
+                {"x":-1, "y":0}]}},
+    {"id":"215", "name":"MDR", "type":"ar", "rarity":"5",
+        "isUnreleased":true,
+        "hp":{"1":60, "100":119},
+        "dmg":{"1":20, "100":56},
+        "hit":{"1":6, "100":50},
+        "dodge":{"1":5, "100":41},
+        "fireOfRate":{"1":51, "100":76},
+        "skill":{
+            "name":"危機嗅探器",
+            "firstCooldownTime":4,
             "cooldownTime":{"1":20, "10":16},
             "detailText":{
-                "0":"進行2秒的瞄準，對最近目標造成{0}倍的傷害。",
+                "0":"若戰鬥內前方一格存在隊友時為隊友提供護盾{0}點和閃避{1}%<br>若不存在則提升自身火力{2}%和射速{3}%<br>持續{4}秒",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":2, "attr":"value"}, {"effectIndex":3, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "allyInFrontOfMe":true, "type":"buff", "target":"allyInFrontOfMe", "attribute":"shield", "value":{"1":15, "10":40}, "time":{"1":6, "10":10}},
+                {"filter":"active", "allyInFrontOfMe":true, "type":"buff", "target":"allyInFrontOfMe", "attribute":"dodge", "value":{"1":40, "10":80}, "time":{"1":6, "10":10}},
+                {"filter":"active", "allyInFrontOfMe":false, "type":"buff", "target":"self", "attribute":"dmg", "value":{"1":20, "10":45}, "time":{"1":6, "10":10}},
+                {"filter":"active", "allyInFrontOfMe":false, "type":"buff", "target":"self", "attribute":"fireOfRate", "value":{"1":10, "10":22}, "time":{"1":6, "10":10}}
+            ]},
+        "aura":{
+            "target":"smg", "effect":{
+                "dmg":{"0":25},
+                "hit":{"0":65}},
+            "grid":[
+                {"x":1, "y":1},
+                {"x":1, "y":0}]}},
+    {"id":"216", "name":"XM8", "type":"ar", "rarity":"4",
+        "isUnreleased":true,
+        "hp":{"1":54, "100":108},
+        "dmg":{"1":18, "100":48},
+        "hit":{"1":6, "100":46},
+        "dodge":{"1":6, "100":42},
+        "fireOfRate":{"1":54, "100":79},
+        "skill":{
+            "name":"Anti-Personnel Grenade",
+            "firstCooldownTime":8,
+            "cooldownTime":{"1":20, "10": 16},
+            "detailText":{
+                "0":"發射榴彈對半徑1.5範圍內的敵人造成{0}倍的傷害。",
                 "format":[{"effectIndex":0, "attr":"value"}]},
             "effects":[
-                {"filter":"active", "type":"attack", "target":"enemy", "prepareTime":2, "allLinkDo":true, "value":{"1":3, "10":6.5}, "toFixedCount":2}
+                {"filter":"active", "type":"attack", "target":"enemy", "radius":1.5, "allLinkDo":false, "value":{"1":5, "10":12}}
+            ]},
+        "aura":{
+            "target":"smg", "effect":{
+                "dmg":{"0":20},
+                "dodge":{"0":15}},
+            "grid":[
+                {"x":1, "y":-1}]}},
+    {"id":"217", "name":"SM-1", "type":"rf", "rarity":"3",
+        "isUnreleased":true,
+        "hp":{"1":41, "100":81},
+        "dmg":{"1":35, "100":95},
+        "hit":{"1":10, "100":79},
+        "dodge":{"1":5, "100":40},
+        "fireOfRate":{"1":27, "100":40},
+        "skill":{
+            "name":"Assault Focus T",
+            "firstCooldownTime":5,
+            "cooldownTime":{"1":20, "10":16},
+            "detailText":{
+                "0":"提升自身射速{0}%,持續{1}秒",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":22, "10":40}, "time":{"1":9, "10":15}}
             ]},
         "aura":{
             "target":"hg", "effect":{
                 "cooldownTime":{"0":12}},
             "grid":[
-                {"x":1, "y":1},
-                {"x":1, "y":0}]}},
-    {"id":"00199", "name":"Type80", "type":"mg", "rarity":"4",
-        "hp":{"1":87, "100":174},
-        "dmg":{"1":36, "100":93},
-        "hit":{"1":4, "100":26},
-        "dodge":{"1":4, "100":24},
-        "fireOfRate":{"1":83, "100":118},
-        "ammoCount":10,
+                {"x":0, "y":-1},
+                {"x":0, "y":1}]}},
+    {"id":"218", "name":"T77", "type":"smg", "rarity":"3",
+        "isUnreleased":true,
+        "hp":{"1":"93", "100":"186"},
+        "dmg":{"1":"10", "100":"24"},
+        "dodge":{"1":"10", "100":"70"},
+        "hit":{"1":"2", "100":"12"},
+        "fireOfRate":{"1":"66", "100":"92"},
         "skill":{
-            "name":"Damage Focus MG",
-            "firstCooldownTime":8,
-            "cooldownTime":{"1":18, "10":18},
-            "detailText":{
-                "0":"提升自身火力{0}%,持續{1}秒",
-                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
-            "effects":[
-                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":25, "10":70}, "time":{"1":4, "10":6}}
-            ]},
-        "aura":{
-            "target":"sg", "effect":{
-                "dmg":{"0":10},
-                "hit":{"0":15}},
-            "self":{"x":-1, "y":1},
-            "grid":[
-                {"x":1, "y":-1},
-                {"x":1, "y":0}]}},
-    {"id":"20094", "name":"Type64", "type":"smg", "rarity":"4", "mod":true,
-        "hp":{"mod1":179, "mod2":180, "mod3":181},
-        "dmg":{"mod1":28, "mod2":28, "mod3":28},
-        "hit":{"mod1":12, "mod2":12, "mod3":12},
-        "dodge":{"mod1":69, "mod2":70, "mod3":70},
-        "fireOfRate":{"mod1":93, "mod2":93, "mod3":93},
-        "skill":{
-            "name":"Stun Grenade",
-            "firstCooldownTime":5,
-            "cooldownTime":{"1":20, "10":16},
-            "detailText":{
-                "0":"投擲閃光彈對半徑2.5範圍內的敵人造成持續{0}秒的暈眩",
-                "format":[{"effectIndex":0, "attr":"time"}]},
-            "effects":[
-                {"filter":"active", "type":"debuff", "target":"enemy","attribute":"stun", "value":{"0":1}, "time":{"1":2.2, "10":4}}
-            ]},
-        "mod2Skill":{
-            "name":"沉默閃光",
-            "detailText":{
-                "0":"閃光彈額外附帶{0}%的命中下降效果,持續{1}秒, 該效果對免疫暈眩的單位有效",
-                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
-            "effects":[
-                {"filter":"active", "type":"debuff", "target":"enemy","attribute":"hit", "value":{"1":25, "10":40}, "time":{"1":5, "10":8}}
-            ]},
+            "name":"掩護專注T",
+            "type":"buff",
+            "target":"self",
+            "firstCooldownTime":"5",
+            "cooldownTime":{"1":"20", "10": "16"},
+            "effect":{
+                "dodge":{"1":"22", "10":"40"},
+                "time":{"1":"9", "10":"15"}}},
         "aura":{
             "target":"ar", "effect":{
-                "fireOfRate":{"0":24}},
+                "fireOfRate":{"1":"12", "5":"12"}},
             "grid":[
-                {"x":-1, "y":0}]}},
+                {"x":"-1", "y":"1"},
+                {"x":"-1", "y":"0"},
+                {"x":"-1", "y":"-1"}]}},
+    {"id":"220", "name":"MP-443", "type":"hg", "rarity":"3",
+        "isUnreleased":true,
+        "hp":{"1":"35", "100":"70"},
+        "dmg":{"1":"12", "100":"33"},
+        "dodge":{"1":"9", "100":"71"},
+        "hit":{"1":"7", "100":"53"},
+        "fireOfRate":{"1":"40", "100":"59"},
+        "skill":{
+            "name":"火力壓制",
+            "type":"debuff",
+            "target":"enemy_all",
+            "firstCooldownTime":"6",
+            "cooldownTime":{"1":"15", "10": "12"},
+            "effect":{
+                "dmg":{"1":"15", "10":"25"},
+                "time":{"1":"5", "2":"6", "3":"6", "4":"6", "5":"7", "6":"7", "7":"7", "8":"8", "9":"8", "10":"8"}}},
+        "aura":{
+            "target":"all", "effect":{
+                "dmg":{"1":"10", "5":"20"},
+                "dodge":{"1":"10", "5":"20"}},
+            "grid":[
+                {"x":"0", "y":"1"},
+                {"x":"1", "y":"1"},
+                {"x":"1", "y":"0"},
+                {"x":"0", "y":"-1"},
+                {"x":"1", "y":"-1"}]}},
+    {"id":"221", "name":"Gsh-18", "type":"hg", "rarity":"3",
+        "isUnreleased":true,
+        "hp":{"1":35, "100":70},
+        "dmg":{"1":13, "100":33},
+        "dodge":{"1":12, "100":86},
+        "hit":{"1":7, "100":48},
+        "fireOfRate":{"1":36, "100":52},
+        "skill":{
+            "name":"鎖鏈衝擊",
+            "firstCooldownTime":6,
+            "cooldownTime":{"1":15, "10":12},
+            "detailText":{
+                "0":"技能期間使用雙槍攻擊，造成兩次傷害且必定暴擊，持續{0}秒",
+                "format":[{"textIndex":0, "effectIndex":0, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "type":"buff", "target":"self","attribute":"criRate", "value":{"1":500, "10":500}, "time":{"1":3, "10":6}},
+                {"filter":"attack", "buffFilter":"鎖鏈衝擊", "type":"attack", "target":"enemy", "value":{"0":1}}
+            ]},
+        "aura":{
+            "target":"all", "effect":{
+                "dmg":{"1":12,"5":24},
+                "hit":{"1":20,"5":40}},
+            "grid":[
+                {"x":0, "y":1},
+                {"x":0, "y":-1},
+                {"x":-1, "y":0},
+                {"x":-1, "y":1},
+                {"x":-1, "y":-1}]}},
+    {"id":"222", "name":"TAC-50", "type":"rf", "rarity":"5",
+        "isUnreleased":true,
+        "hp":{"1":"44", "100":"87"},
+        "dmg":{"1":"52", "100":"155"},
+        "dodge":{"1":"4", "100":"31"},
+        "hit":{"1":"10", "100":"83"},
+        "fireOfRate":{"1":"21", "100":"32"},
+        "skill":{
+            "name":"楓華螢火",
+            "type":"attack",
+            "target":"enemy_specific",
+            "firstCooldownTime":"10",
+            "cooldownTime":{"1":"20", "10": "16"},
+            "detailText":{
+                "0":"被動：技能冷卻結束后，TAC的無人機會標記隨機敵人(每秒刷新一次)。<br />主動：對被標記的敵人進行一次可以暴擊的狙擊，造成4.5倍的傷害。<br />前置冷卻10秒，冷卻時間:16秒",
+                "format":[]},
+            "effect":{
+                "attack":{"1":"2.5", "10":"4.5"},
+                "time":{"1":"", "10":""}}},
+        "aura":{
+            "target":"hg", "effect":{
+                "cooldownTime":{"1":"18", "5":"18"}},
+            "grid":[
+                {"x":1, "y":1},
+                {"x":1, "y":0}]}},
+    {"id":"228", "name":"Type100 Shiki", "type":"smg", "rarity":"5",
+        "hp":{"1":"106", "100":"212"},
+        "dmg":{"1":"11", "100":"29"},
+        "dodge":{"1":"9", "100":"67"},
+        "hit":{"1":"2", "100":"14"},
+        "fireOfRate":{"1":"52", "100":"76"},
+        "skill":{
+            "name":"櫻逆像",
+            "type":"",
+            "target":"",
+            "firstCooldownTime":8,
+            "cooldownTime":{"1":20, "10":16},
+            "detailText":{
+                "0":"5秒時間內，為自身釋放一個能吸收15點（42點）傷害的護盾。<br />若持續時間內護盾被打破，則在破壞後的3秒（5秒）內提升自身迴避30%（65%）。<br />若持續時間內護盾未打破，則在持續時間結束後的3秒（5秒）內提升自身火力40%（85%）。<br />開場CD8秒，技能間隔CD20秒（16秒）",
+                "format":[]},
+            "effect":{
+            },
+            "effectNight":{
+            }},
+        "aura":{
+            "target":"ar", "effect":{
+                "dmg":{"1":"12", "5":"12"},
+                "hit":{"1":"35", "5":"35"}},
+            "grid":[
+                {"x":"-1", "y":"1"},
+                {"x":"-1", "y":"-1"}]}},
+    {"id": "233"},
+    {"id": "235"},
+    {"id": "236", "name":"K11", "type":"ar", "rarity":"5",
+        "hp":{"1":"68", "100":"135"},
+        "dmg":{"1":"18", "100":"53"},
+        "dodge":{"1":"5", "100":"37"},
+        "hit":{"1":"7", "100":"54"},
+        "fireOfRate":{"1":"50", "100":"76"},
+        "skill":{
+            "name":"Terror Grenades",
+            "firstCooldownTime":6,
+            "cooldownTime":{"1":20, "10": 16},
+            "detailText":{
+                "0":"Launches grenades based on self dummy link expansions, dealing {0}00% damage to enemies within a radius of 1 unit. Enemies hit by grenades is marked for 3 seconds. When K11's grenades hit marked enemies, they take an additional 2x damage.",
+                "format":[{"effectIndex":0, "attr":"value"}]},
+            "effects":[
+                {"filter":"active", "type":"attack", "target":"enemy", "radius":1.5, "allLinkDo":true, "value":{"1":2, "10":4},"todo": "fix marking for 3s not existing"}
+            ]},
+        "aura":{
+            "target":"smg", "effect":{
+                "dmg":{"1":"20", "5":"20"},
+                "dodge":{"1":"15", "5":"15"}},
+            "grid":[
+                {"x":"1", "y":"1"},
+                {"x":"1", "y":"0"},
+                {"x":"1", "y":"-1"}]}},
+    {"id": "237", "name":"SAR-21", "type":"ar", "rarity":"4",
+        "hp":{"1":"58", "100":"116"},
+        "dmg":{"1":"18", "100":"44"},
+        "dodge":{"1":"6", "100":"38"},
+        "hit":{"1":"7", "100":"46"},
+        "fireOfRate":{"1":"57", "100":"80"},
+        "skill":{
+            "name":"Great Meteor Storm",
+            "type":"buff",
+            "target":"self",
+            "firstCooldownTime":"4",
+            "cooldownTime":{"1":"20", "10": "16"},
+            "effect":{
+                "fireOfRate":{"1":"187", "10":"187"},
+                "hit":{"1":"-30", "10":"0"},
+                "time":{"1":"3", "10":"6"}}},
+        "aura":{
+            "target":"smg", "effect":{
+                "dmg":{"1":"20", "5":"20"},
+                "hit":{"1":"55", "5":"55"}},
+            "grid":[
+                {"x":"1", "y":"1"},
+                {"x":"1", "y":"0"},
+                {"x":"1", "y":"-1"}]}},
+    {"id": "238"},
+    {"id": "243"},
+    {"id": "245"},
+    {"id":"247", "name":"K31", "type":"rf", "rarity":"4",
+        "isUnreleased":true,
+        "hp":{"1":39, "100":78},
+        "dmg":{"1":45, "100":126},
+        "hit":{"1":10, "100":78},
+        "dodge":{"1":5, "100":37},
+        "fireOfRate":{"1":26, "100":39},
+        "criRate":40,
+        "skill":{
+            "name":"Emergency Speed",
+            "firstCooldownTime":6,
+            "cooldownTime":{"1":10, "10": 8},
+            "detailText":{
+                "0":"At the cost of decreasing her own accuracy by {0}%, increases her own rate of fire by {1}% for {2} seconds.",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":1, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "type":"debuff", "target":"self", "attribute":"hit", "value":{"1":20, "10":35}, "time":{"1":3, "10":5}},
+                {"filter":"active", "type":"buff", "target":"self", "attribute":"fireOfRate", "value":{"1":40, "10":80}, "time":{"1":3, "10":5}}
+            ]},
+        "aura":{
+            "target":"hg", "effect":{
+                "cooldownTime":{"0":15,"5":15}
+            },
+            "grid":[
+                {"x":1, "y":0},
+                {"x":1, "y":-1}]}},
+    {"id": "248"},
+    {"id": "249"},
+    {"id":"257", "name":"M200", "type":"rf", "rarity":"5",
+        "hp":{"1":44, "100":88},
+        "dmg":{"1":49, "100":145},
+        "hit":{"1":11, "100":96},
+        "dodge":{"1":4, "100":31},
+        "fireOfRate":{"1":22, "100":34},
+        "criRate":40,
+        "skill":{
+            "name":"Killing Intent of the Silent",
+            "firstCooldownTime":6,
+            "cooldownTime":{"1":20, "10": 16},
+            "detailText":{
+                "0":"Enter sniper mode for {0} seconds. After every {1} seconds of aiming,<br>deal {2}x damage (able to crit) to the furthest target and decrease<br>their damage by {3}% for 3 seconds.<br><br>Passive: Normal attacks against armorless enemies deal {4}x damage.",
+                "format":[
+                    {"effectIndex":1, "attr":"time"},
+                    {"effectIndex":3, "attr":"value"},
+                    {"effectIndex":4, "attr":"value"},
+                    {"effectIndex":2, "attr":"value"},
+                    {"effectIndex":0, "attr":"value"}
+                ]},
+            "effects":[
+                {"filter":"passive", "value":{"1":1.05, "10":1.05}},
+                {"filter":"active", "type":"buff", "target":"self", "attribute":"attackFrame", "value":{"1":75,"10":45}, "time":{"1":9, "10":9}},
+                {"filter":"passive", "value":{"1":5, "10":10}},
+                {"filter":"passive", "value":{"1":2.5, "10":1.5}, "toFixedCount":1},
+                {"filter":"attackReplace", "buffFilter":"Killing Intent of the Silent", "type":"attack", "target":"enemy", "certainToHit":true, "ignoreArmor":true, "canCri":true, "value":{"1":1.5, "10":2}, "toFixedCount":2}
+            ]},
+        "aura":{
+            "target":"hg", "effect":{
+                "cooldownTime":{"0":18,"5":18}},
+            "grid":[
+                {"x":1, "y":1},
+                {"x":1, "y":0}]}},
+    {"id":"1001", "name":"Noel", "type":"hg", "rarity":"extra",
+        "hp":{"1":"30", "100":"60"},
+        "dmg":{"1":"14", "100":"39"},
+        "dodge":{"1":"10", "100":"82"},
+        "hit":{"1":"8", "100":"60"},
+        "fireOfRate":{"1":"44", "100":"65"},
+        "skill":{
+            "name":"Zero Gun/Fenrir",
+            "type":"attack",
+            "target":"enemy",
+            "firstCooldownTime":"6",
+            "cooldownTime":{"1":"15", "10": "12"},
+            "detailText":{
+                "val":"Dash towards the enemy,<br>inflicts {0}x damage for 8 hits within a small area."
+            },
+            "effect":{
+                "attack":{"1":"0.6", "10":"1.2", "attackSkillTimes":"8"},
+                "time":{"1":"", "10":""}}},
+        "aura":{
+            "target":"all", "effect":{
+                "fireOfRate":{"1":"15", "5":"30"},
+                "dodge":{"1":"10", "5":"20"}},
+            "grid":[
+                {"x":"-1", "y":"1"},
+                {"x":"0", "y":"1"},
+                {"x":"1", "y":"1"},
+                {"x":"-1", "y":"-1"},
+                {"x":"0", "y":"-1"},
+                {"x":"1", "y":"-1"}]}},
+    {"id":"1002", "name":"Elphelt", "type":"sg", "rarity":"extra",
+        "hp":{"1":"138", "100":"275"},
+        "dmg":{"1":"15", "100":"36"},
+        "dodge":{"1":"2", "100":"9"},
+        "hit":{"1":"2", "100":"13"},
+        "fireOfRate":{"1":"20", "100":"28"},
+        "ammoCount":"5",
+        "armor":{"1":"3", "100":"23"},
+        "skill":{
+            "name":"Genoverse",
+            "type":"attack",
+            "target":"enemy",
+            "firstCooldownTime":"10",
+            "cooldownTime":{"1":"20", "10": "16"},
+            "detailText":{
+                "val":"Deals {0}x Elphelt's damage and locks on to the target before launching a missile that deals {1}x Elphelt's damage to enemies within 1.5 unit radius."
+            },
+            "effect":{
+                "attack":{"1":"4", "10":"8"},
+                "attack2":{"1":"6", "10":"12", "radius":"1.5"},
+                "time":{"1":"", "10":""}}},
+        "aura":{
+            "target":"mg", "effect":{
+                "dmg":{"1":"15", "5":"15"},
+                "hit":{"1":"15", "5":"15"}},
+            "self":{"x":"1", "y":"0"},
+            "grid":[
+                {"x":"-1", "y":"1"},
+                {"x":"-1", "y":"-1"}]}},
+    {"id":"1004", "name":"雷电芽衣", "type":"rf", "rarity":"extra", "version":"cn",
+        "hp":{"1":"42", "100":"84"},
+        "dmg":{"1":"52", "100":"146"},
+        "dodge":{"1":"4", "100":"32"},
+        "hit":{"1":"9", "100":"70"},
+        "fireOfRate":{"1":"23", "100":"34"},
+        "skill":{
+            "name":"超电磁狙击",
+            "type":"attack",
+            "target":"enemy",
+            "firstCooldownTime":"6",
+            "cooldownTime":{"1":"20", "10": "16"},
+            "prepareTime":"1.5",
+            "detailText":{
+                "val":"进行1.5秒的瞄准,对最远目标造成{0}倍的伤害，同时在{1}秒内对目标附加麻痹（无法移动和攻击）效果。"
+            },
+            "effect":{
+                "attack":{"1":"2.5", "10":"5"},
+                "paralysis":{"1":"1", "10":"1"},
+                "time":{"1":"1.5", "10":"3"}}},
+        "aura":{
+            "target":"hg", "effect":{
+                "cooldownTime":{"1":"18", "5":"18"}},
+            "grid":[
+                {"x":"0", "y":"-1"},
+                {"x":"1", "y":"-1"}]}},
+    {"id":"1009", "name":"Clear", "type":"hg", "rarity":"extra",
+        "isUnreleased":true,
+        "hp":{"1":"35", "100":"66"},
+        "dmg":{"1":"11", "100":"31"},
+        "dodge":{"1":"11", "100":"88"},
+        "hit":{"1":"6", "100":"62"},
+        "fireOfRate":{"1":"29", "100":"61"},
+        "skill":{
+            "name":"再接再厲！",
+            "type":"buff",
+            "target":"ally",
+            "firstCooldownTime":"6",
+            "detailText":{
+                "0":"暫停普通攻擊並進行五次演奏<br />每次提升隨機一位隊友的火力和命中30%(裝備“榮耀之光”後提升至40%)<br />效果可疊加1層<br />每層持續3秒。",
+                "format":[]},
+            "cooldownTime":{"1":"15", "10": "12"},
+            "effect":{
+                "dmg":{"1":"9", "10":"18"},
+                "time":{"1":"6","10":"6"}}},
+        "aura":{
+            "target":"all", "effect":{
+                "fireOfRate":{"1":"15", "5":"30"},
+                "hit":{"1":"25", "5":"50"}},
+            "grid":[
+                {"x":"-1", "y":"1"},
+                {"x":"0", "y":"1"},
+                {"x":"-1", "y":"0"},
+                {"x":"-1", "y":"-1"},
+                {"x":"0", "y":"-1"}]}},
+    {"id":"1010", "name":"Fail", "type":"hg", "rarity":"extra",
+        "isUnreleased":true,
+        "hp":{"1":"35", "100":"66"},
+        "dmg":{"1":"11", "100":"31"},
+        "dodge":{"1":"11", "100":"87"},
+        "hit":{"1":"6", "100":"62"},
+        "fireOfRate":{"1":"29", "100":"61"},
+        "skill":{
+            "name":"慢慢來吧～",
+            "type":"",
+            "target":"",
+            "firstCooldownTime":"6",
+            "detailText":{
+                "0":"暫停普通攻擊並進行五次演奏<br />每次降低隨機3名敵方單位的射速和命中12%(裝備“漆黑之貓”後提升至15%)<br />效果可疊加2層<br />每層持續3秒。",
+                "format":[]},
+            "cooldownTime":{"1":"15", "10": "12"},
+            "effect":{
+            },
+            "effectNight":{
+            }},
+        "aura":{
+            "target":"all", "effect":{
+                "dmg":{"1":"15", "5":"30"},
+                "hit":{"1":25, "5":50}},
+            "grid":[
+                {"x":"0", "y":"1"},
+                {"x":"1", "y":"1"},
+                {"x":"1", "y":"0"},
+                {"x":"0", "y":"-1"},
+                {"x":"1", "y":"-1"}]}},
     {"id":"20002", "name":"M1911", "type":"hg", "rarity":"4", "mod":true,
+        "isUnreleased":true,
+        "displayName":"M1911<br>[MOD]",
         "hp":{"mod1":74, "mod2":74, "mod3":75},
         "dmg":{"mod1":28, "mod2":28, "mod3":29},
         "hit":{"mod1":51, "mod2":51, "mod3":52},
@@ -4770,314 +5416,178 @@
                 {"x":0, "y":-1},
                 {"x":1, "y":0},
                 {"x":-1, "y":0}]}},
-    {"id":"20093", "name":"IDW", "type":"smg", "rarity":"4", "mod":true,
-        "hp":{"mod1":152, "mod2":153, "mod3":154},
-        "dmg":{"mod1":27, "mod2":27, "mod3":27},
-        "hit":{"mod1":16, "mod2":16, "mod3":16},
-        "dodge":{"mod1":90, "mod2":91, "mod3":92},
-        "fireOfRate":{"mod1":75, "mod2":75, "mod3":75},
+    {"id":"20005", "name":"Nagant M1895", "type":"hg", "rarity":"4", "mod":true,
+        "isUnreleased":true,
+        "displayName":"Nagant M1895<br>[MOD]",
+        "hp":{"mod1":71, "mod2":71, "mod3":72},
+        "dmg":{"mod1":35, "mod2":35, "mod3":35},
+        "hit":{"mod1":47, "mod2":48, "mod3":48},
+        "dodge":{"mod1":98, "mod2":99, "mod3":100},
+        "fireOfRate":{"mod1":45, "mod2":45, "mod3":45},
         "skill":{
-            "name":"Evasion Focus",
+            "name":"Firepower Suppression N",
             "firstCooldownTime":6,
-            "cooldownTime":{"1":10, "10":8},
+            "cooldownTime":{"1":15, "10":12},
             "detailText":{
-                "0":"提升自身迴避{0}%, 持續{1}秒",
+                "0":"Decreases the enemy squads damage by {0}% for {1} seconds.",
                 "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
             "effects":[
-                {"filter":"active", "type":"buff", "target":"self","attribute":"dodge", "value":{"1":70, "10":130}, "time":{"1":3, "10":5}}
+                {"filter":"active", "environment":"day", "type":"debuff", "target":"enemy_all", "attribute":"dmg", "value":{"1":15, "10":25}, "time":{"1":3, "10":5}},
+                {"filter":"active", "environment":"night", "type":"debuff", "target":"enemy_all", "attribute":"dmg", "value":{"1":25, "10":40}, "time":{"1":5, "2":6, "4":6, "5":7, "7":7, "8":8, "10":8}}
             ]},
         "mod2Skill":{
-            "name":"電光大狂歡",
+            "name":"Seven Note Cadenza",
             "detailText":{
-                "0":"戰鬥開始時擁有3格電量,每一點電量會提供額外{0}%的射速及{1}%的火力<br>電量每{2}秒消耗一格<br>開啟掩護專注時電量會充滿",
-                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":1, "attr":"stackDownWhenEveryTime"}]},
-            "effects":[
-                {"filter":"battleStart", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":6, "10":10}, "initStack":3, "stackMax":3, "stackDownWhenEveryTime":{"1":1, "10":2}},
-                {"filter":"battleStart", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":12, "10":20}, "initStack":3, "stackMax":3, "stackDownWhenEveryTime":{"1":1, "10":2}},
-                {"filter":"active", "type":"buffStackAdd", "target":"self","buffName":"電光大狂歡", "value":{"0":3}}
-            ]},
-        "aura":{
-            "target":"ar", "effect":{
-                "dodge":{"0":20},
-                "criRate":{"0":10}},
-            "grid":[
-                {"x":-1, "y":-1},
-                {"x":-1, "y":0},
-                {"x":-1, "y":1}]}},
-    {"id":"00211", "name":"SRS", "type":"rf", "rarity":"5",
-        "hp":{"1":44, "100":87},
-        "dmg":{"1":46, "100":135},
-        "hit":{"1":10, "100":82},
-        "dodge":{"1":4, "100":35},
-        "fireOfRate":{"1":23, "100":35},
-        "skill":{
-            "name":"狩獵示範",
-            "firstCooldownTime":6,
-            "cooldownTime":{"1":10, "10":8},
-            "detailText":{
-                "0":"提升自身火力{0}%和命中{1}%,持續{2}秒",
+                "0":"Reloads after every 7 attacks. The first attack after reloading will increase all allies' damage by {0}% and accuracy by {1}% for {2} seconds.",
                 "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
             "effects":[
-                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":30, "10":60}, "time":{"1":3, "10":5}},
-                {"filter":"active", "type":"buff", "target":"self","attribute":"hit", "value":{"1":20, "10":40}, "time":{"1":3, "10":5}}
-            ]},
-        "aura":{
-            "target":"hg", "effect":{
-                "cooldownTime":{"0":18}},
-            "grid":[
-                {"x":1, "y":1},
-                {"x":1, "y":0}]}},
-    {"id":"00209", "name":"OTs-39", "type":"smg", "rarity":"3",
-        "hp":{"1":96, "100":190},
-        "dmg":{"1":11, "100":27},
-        "hit":{"1":2, "100":14},
-        "dodge":{"1":10, "100":72},
-        "fireOfRate":{"1":52, "100":74},
-        "skill":{
-            "name":"Stun Grenade",
-            "firstCooldownTime":5,
-            "cooldownTime":{"1":20, "10":16},
-            "detailText":{
-                "0":"投擲閃光彈對半徑2.5範圍內的敵人造成持續{0}秒的暈眩",
-                "format":[{"effectIndex":0, "attr":"time"}]},
-            "effects":[
-                {"filter":"active", "type":"debuff", "target":"enemy","attribute":"stun", "value":{"0":1}, "time":{"1":2, "10":3.5}}
-            ]},
-        "aura":{
-            "target":"ar", "effect":{
-                "dmg":{"0":16}},
-            "grid":[
-                {"x":-1, "y":-1},
-                {"x":-1, "y":0}]}},
-    {"id":"00208", "name":"HK21", "type":"mg", "rarity":"5",
-        "hp":{"1":85, "100":169},
-        "dmg":{"1":32, "100":92},
-        "hit":{"1":4, "100":29},
-        "dodge":{"1":4, "100":33},
-        "fireOfRate":{"1":90, "100":135},
-        "ammoCount":10,
-        "skill":{
-            "name":"無差別崩壞",
-            "firstCooldownTime":8,
-            "cooldownTime":{"1":18, "10":18},
-            "detailText":{
-                "0":"提升裝彈量{0}<br>火力{1}%以及命中{2}%<br>同時進入掃射模式<br>每次攻擊都會切換攻擊目標<br>但移動速度下降50%<br>持續{3}秒。",
-                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":2, "attr":"value"}, {"effectIndex":2, "attr":"time"}]},
-            "effects":[
-                {"filter":"active", "type":"buff", "target":"self", "attribute":"ammoCount", "value":{"1":1, "3":1, "4":2, "10":2}},
-                {"filter":"active", "type":"buff", "target":"self", "attribute":"dmg", "value":{"1":10, "10":40}, "time":{"1":6, "10":8}},
-                {"filter":"active", "type":"buff", "target":"self", "attribute":"hit", "value":{"1":15, "10":30}, "time":{"1":6, "10":8}}
-            ]},
-        "aura":{
-            "target":"sg", "effect":{
-                "dmg":{"0":15},
-                "armor":{"0":15}},
-            "self":{"x":-1, "y":0},
-            "grid":[
-                {"x":1, "y":1},
-                {"x":1, "y":0}]}},
-    {"id":"00212", "name":"K5", "type":"hg", "rarity":"4",
-        "hp":{"1":33, "100":66},
-        "dmg":{"1":11, "100":29},
-        "hit":{"1":7, "100":52},
-        "dodge":{"1":11, "100":81},
-        "fireOfRate":{"1":43, "100":62},
-        "skill":{
-            "name":"戰地哲學館",
-            "firstCooldownTime":6,
-            "cooldownTime":{"1":15, "10":12},
-            "detailText":{
-                "0":"根據位於影響格上隊友的種類提升不同能力:手槍/衝鋒槍提升閃避{0}%<br>步槍/突擊步槍提升傷害{1}%<br>機槍/霰彈槍提升命中{2}%<br>持續{3}秒。",
-                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":2, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
-            "effects":[
-                {"filter":"active", "type":"buff", "target":"self_aura_grid", "targetTypes":["hg", "smg"], "attribute":"dodge", "value":{"1":20, "10":40}, "time":{"1":5, "10":8}},
-                {"filter":"active", "type":"buff", "target":"self_aura_grid", "targetTypes":["rf", "ar"], "attribute":"dmg", "value":{"1":10, "10":22}, "time":{"1":5, "10":8}},
-                {"filter":"active", "type":"buff", "target":"self_aura_grid", "targetTypes":["mg", "sg"], "attribute":"hit", "value":{"1":40, "10":80}, "time":{"1":5, "10":8}}
+                {"filter":"firstAttackEveryXTimes", "everyXTimes":7, "type":"buff", "target":"ally", "attribute":"dmg", "value":{"1":5, "10":10}, "time":{"1":2, "10":4}},
+                {"filter":"firstAttackEveryXTimes", "everyXTimes":7, "type":"buff", "target":"ally", "attribute":"hit", "value":{"1":5, "10":10}, "time":{"1":2, "10":4}}
             ]},
         "aura":{
             "target":"all", "effect":{
-                "dmg":{"1":15, "5":30},
-                "hit":{"1":20, "5":40}},
+                "dmg":{"1":18, "5":36},
+                "criRate":{"1":10, "5":20}},
             "grid":[
-                {"x":-1, "y":-1},
-                {"x":-1, "y":0},
-                {"x":-1, "y":1},
-                {"x":0, "y":-1},
                 {"x":0, "y":1},
-                {"x":1, "y":0}]}},
-    {"id":"00215", "name":"MDR", "type":"ar", "rarity":"5",
-        "hp":{"1":60, "100":119},
-        "dmg":{"1":20, "100":56},
-        "hit":{"1":6, "100":50},
-        "dodge":{"1":5, "100":41},
-        "fireOfRate":{"1":51, "100":76},
+                {"x":0, "y":-1},
+                {"x":-1, "y":0}]}},
+    {"id":"20039", "name":"Mosin-Nagant", "type":"rf", "rarity":"5", "mod":true,
+        "isUnreleased":true,
+        "displayName":"Mosin-Nagant<br>[MOD]",
+        "hp":{"mod1":90, "mod2":90, "mod3":91},
+        "dmg":{"mod1":134, "mod2":135, "mod3":136},
+        "dodge":{"mod1":39, "mod2":39, "mod3":40},
+        "hit":{"mod1":87, "mod2":88, "mod3":89},
+        "fireOfRate":{"mod1":31, "mod2":31, "mod3":31},
         "skill":{
-            "name":"危機嗅探器",
-            "firstCooldownTime":4,
-            "cooldownTime":{"1":20, "10":16},
+            "name":"Designated Shot",
+            "type":"attack",
+            "target":"enemy_farthest",
+            "firstCooldownTime":"10",
+            "cooldownTime":{"1":"20", "10": "16"},
+            "prepareTime":"1.5",
+            "effect":{
+                "attack":{"1":"3.2", "10":"6.5"},
+                "time":{"1":"", "10":""}}},
+		"mod2Skill":{
+            "name":"Pure White Reaper",
             "detailText":{
-                "0":"若戰鬥內前方一格存在隊友時為隊友提供護盾{0}點和閃避{1}%<br>若不存在則提升自身火力{2}%和射速{3}%<br>持續{4}秒",
-                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":2, "attr":"value"}, {"effectIndex":3, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
+                "val":"Killing an enemy unit with her regular attack increases Mosin-Nagant's damage by {2}% for {1} seconds.<br>Killing an enemy unit with Designated Shot increases Mosin-Nagant's rate of fire by {0}%."},
             "effects":[
-                {"filter":"active", "allyInFrontOfMe":true, "type":"buff", "target":"allyInFrontOfMe", "attribute":"shield", "value":{"1":15, "10":40}, "time":{"1":6, "10":10}},
-                {"filter":"active", "allyInFrontOfMe":true, "type":"buff", "target":"allyInFrontOfMe", "attribute":"dodge", "value":{"1":40, "10":80}, "time":{"1":6, "10":10}},
-                {"filter":"active", "allyInFrontOfMe":false, "type":"buff", "target":"self", "attribute":"dmg", "value":{"1":20, "10":45}, "time":{"1":6, "10":10}},
-                {"filter":"active", "allyInFrontOfMe":false, "type":"buff", "target":"self", "attribute":"fireOfRate", "value":{"1":10, "10":22}, "time":{"1":6, "10":10}}
+                {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":15, "10":30}, "time":{"1":3, "10":3}},
+				{"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":0, "10":0}, "time":{"1":3, "10":3}}
             ]},
         "aura":{
-            "target":"smg", "effect":{
-                "dmg":{"0":25},
-                "hit":{"0":65}},
+            "target":"hg", "effect":{
+                "cooldownTime":{"1":"18", "5":"18"}},
+            "grid":[
+                {"x":"0", "y":"1"}]}},
+    {"id":"20051", "name":"FN-49", "type":"rf", "rarity":"4", "mod":true,
+        "isUnreleased":true,
+        "displayName":"FN-49<br>[MOD]",
+        "hp":{"mod1":94, "mod2":95, "mod3":95},
+        "dmg":{"mod1":118, "mod2":119, "mod3":120},
+        "dodge":{"mod1":33, "mod2":33, "mod3":33},
+        "hit":{"mod1":62, "mod2":63, "mod3":64},
+        "fireOfRate":{"mod1":34, "mod2":34, "mod3":34},
+        "skill":{
+            "name":"Damage Focus",
+            "firstCooldownTime":5,
+            "cooldownTime":{"1":10, "10": 8},
+            "detailText":{
+                "0":"Increases FN-49's damage by {0}% for {1} seconds.",
+                "format":[{"textIndex":0, "effectIndex":0, "attr":"value"}, {"textIndex":1, "effectIndex":0, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":40, "10":65}, "time":{"1":3, "10":5}}
+            ]},
+        "mod2Skill":{
+            "name":"Cold Fighting Spirit",
+            "detailText":{
+                "0":"When Damage Focus is activated, increases FN-49's rate of fire by {0}% for {1} seconds.",
+                "format":[{"textIndex":0, "effectIndex":0, "attr":"value"}, {"textIndex":1, "effectIndex":0, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":6, "10":15}, "time":{"1":3, "10":5}}
+            ]},
+        "aura":{
+            "target":"hg", "effect":{
+                "cooldownTime":{"0":15}},
             "grid":[
                 {"x":1, "y":1},
-                {"x":1, "y":0}]}},
-    {"id":"00213", "name":"C-MS", "type":"smg", "rarity":"5",
-        "hp":{"1":93, "100":185},
-        "dmg":{"1":12, "100":32},
-        "hit":{"1":2, "100":15},
-        "dodge":{"1":10, "100":75},
-        "fireOfRate":{"1":60, "100":87},
+                {"x":1, "y":-1}]}},
+    {"id":"20055", "name":"M4A1", "type":"ar", "rarity":"5", "mod":true,
+        "isUnreleased":true,
+        "displayName":"M4A1<br>[MOD]",
+        "hp":{"mod1":112, "mod2":113, "mod3":113},
+        "dmg":{"mod1":50, "mod2":50, "mod3":50},
+        "dodge":{"mod1":49, "mod2":49, "mod3":50},
+        "hit":{"mod1":49, "mod2":49, "mod3":50},
+        "fireOfRate":{"mod1":80, "mod2":80, "mod3":80},
         "skill":{
-            "name":"心情連結",
-            "firstCooldownTime":1,
-            "cooldownTime":{"1":1, "10":1},
-            "detailText":{
-                "0":"點擊技能在不同彈藥間進行切換<br>每種彈藥提供不同的常駐狀態效果:亞音速彈(默認):提升回避{0}%/勺尖彈:提升火力{1}%/標準彈:提升命中{2}%",
-                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":2, "attr":"value"}]},
-            "effects":[
-                {"filter":"battleStart", "name":"亞音速彈", "type":"buff", "target":"self", "attribute":"dodge", "value":{"1":30, "10":65}, "grouped":true, "indexGrouped":1},
-                {"filter":"battleStart", "name":"勺尖彈", "type":"buff", "target":"self", "attribute":"dmg", "value":{"1":40, "10":85}, "grouped":true, "indexGrouped":2},
-                {"filter":"battleStart", "name":"標準彈", "type":"buff", "target":"self", "attribute":"hit", "value":{"1":110, "10":200}, "grouped":true, "indexGrouped":3}
-            ]},
-        "aura":{
-            "target":"ar", "effect":{
-                "dmg":{"0":15},
-                "fireOfRate":{"0":5}},
-            "grid":[
-                {"x":-1, "y":-1},
-                {"x":-1, "y":1},
-                {"x":-1, "y":0}]}},
-    {"id":"00216", "name":"XM8", "type":"ar", "rarity":"4",
-        "hp":{"1":54, "100":108},
-        "dmg":{"1":18, "100":48},
-        "hit":{"1":6, "100":46},
-        "dodge":{"1":6, "100":42},
-        "fireOfRate":{"1":54, "100":79},
-        "skill":{
-            "name":"Anti-Personnel Grenade",
-            "firstCooldownTime":8,
+            "name":"Damage Focus T",
+            "firstCooldownTime":4,
             "cooldownTime":{"1":20, "10": 16},
             "detailText":{
-                "0":"發射榴彈對半徑1.5範圍內的敵人造成{0}倍的傷害。",
-                "format":[{"effectIndex":0, "attr":"value"}]},
+                "val":"Increases M4A1s damage by {0}% for {1} seconds."},
             "effects":[
-                {"filter":"active", "type":"attack", "target":"enemy", "radius":1.5, "allLinkDo":false, "value":{"1":5, "10":12}}
+                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":45, "10":75}, "time":{"1":6, "10":10}}
+            ]},
+        "mod2Skill":{
+            "name":"Avenger's Mark",
+            "detailText":{
+                "val":"During the effects of Damage Focus T, apply Avenger's Mark to targeted enemies. If fewer than 3 allied T-dolls are present on the field, decrease rate of fire by 70% and deal {0}% damage to the primary target while attacking. Enemies within 2.5 units take 100% splash damage. (The damage increase from Damage Focus T still applies during this effect.)"},
+            "effects":[
+                {"filter":"active", "allyCountLessOrEqualFilter":3, "type":"debuff", "target":"self", "attribute":"fireOfRate", "value":{"0":70}, "untilBuffEnd":"Damage Focus T"},
+                {"filter":"attackReplace", "buffFilter":"Avenger's Mark", "type":"attack", "target":"enemy", "certainToHit":true, "ignoreArmor":true, "canCri":false, "value":{"1":3, "10":6}, "toFixedCount":2},
+                {"filter":"attackAttacked", "buffFilter":"Damage Focus T", "type":"debuff", "target":"enemyAttackAttacked", "attribute":"dmg", "value":{"0":0}},
+                {"filter":"attack", "buffFilter":"Avenger's Mark", "type":"attack", "target":"enemy", "radius":2.5, "allLinkDo":false, "value":{"0":1}}
+            ]},
+        "aura":{
+            "target":"ar", "effect":{
+                "dmg":{"0":20},
+                "criRate":{"0":32}},
+            "grid":[
+                {"x":0, "y":1},
+                {"x":1, "y":1},
+                {"x":1, "y":0},
+                {"x":0, "y":-1},
+                {"x":1, "y":-1}]}},
+    {"id":"20057", "name":"ST AR-15", "type":"ar", "rarity":"5", "mod":true,
+        "isUnreleased":true,
+        "displayName":"ST AR-15<br>[MOD]",
+        "hp":{"mod1":106, "mod2":107, "mod3":108},
+        "dmg":{"mod1":49, "mod2":49, "mod3":50},
+        "dodge":{"mod1":51, "mod2":51, "mod3":52},
+        "hit":{"mod1":54, "mod2":54, "mod3":55},
+        "fireOfRate":{"mod1":78, "mod2":78, "mod3":78},
+        "skill":{
+            "name":"Assault Focus T",
+            "firstCooldownTime":4,
+            "cooldownTime":{"1":20, "10": 16},
+            "detailText":{
+                "val":"Increases ST AR15's rate of fire by {0}% for {1} seconds."},
+            "effects":[
+                {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":30, "10":50}, "time":{"1":9, "10":15}}
+            ]},
+        "mod2Skill":{
+            "name":"Crime and Punishment",
+            "detailText":{
+                "val":"While Assault Focus T is active, ST AR15 will raise her secondary weapon and attack simultaneously. Secondary weapon deals {0}% of the primary damage, increased to {1}% against targets with Avenger's Mark."},
+            "effects":[
+                {"filter":"attack", "buffFilter":"Assault Focus T", "type":"attack", "target":"enemy", "targetNotWithBuff":"Avenger's Mark", "value":{"1":0.05, "10":0.1}, "toFixedCount":2},
+                {"filter":"attack", "buffFilter":"Assault Focus T", "type":"attack", "target":"enemy", "targetWithBuff":"Avenger's Mark", "value":{"1":0.1, "10":0.2}, "toFixedCount":2}
             ]},
         "aura":{
             "target":"smg", "effect":{
-                "dmg":{"0":20},
+                "fireOfRate":{"0":10},
                 "dodge":{"0":15}},
             "grid":[
+                {"x":1, "y":1},
+                {"x":1, "y":0},
                 {"x":1, "y":-1}]}},
-    {"id":"00217", "name":"SM-1", "type":"rf", "rarity":"3",
-        "hp":{"1":41, "100":81},
-        "dmg":{"1":35, "100":95},
-        "hit":{"1":10, "100":79},
-        "dodge":{"1":5, "100":40},
-        "fireOfRate":{"1":27, "100":40},
-        "skill":{
-            "name":"Assault Focus T",
-            "firstCooldownTime":5,
-            "cooldownTime":{"1":20, "10":16},
-            "detailText":{
-                "0":"提升自身射速{0}%,持續{1}秒",
-                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
-            "effects":[
-                {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":22, "10":40}, "time":{"1":9, "10":15}}
-            ]},
-        "aura":{
-            "target":"hg", "effect":{
-                "cooldownTime":{"0":12}},
-            "grid":[
-                {"x":0, "y":-1},
-                {"x":0, "y":1}]}},
-    {"id":"00202", "name":"雷電", "type":"hg", "rarity":"4",
-        "hp":{"1":43, "100":86},
-        "dmg":{"1":16, "100":46},
-        "hit":{"1":7, "100":57},
-        "dodge":{"1":7, "100":60},
-        "fireOfRate":{"1":24, "100":37},
-        "skill":{
-            "name":"Critical Point Shot",
-            "firstCooldownTime":4,
-            "cooldownTime":{"1":15, "10":12},
-            "detailText":{
-                "0":"Aims for 1 second and shoots the nearest enemy for {0}% damage.<br>This shot can be avoided, in that case, reload for 2 seconds and aim again.",
-                "format":[{"effectIndex":0, "attr":"value", "percent":true}]},
-            "effects":[
-                {"filter":"active", "type":"attack", "target":"enemy", "prepareTime":1, "postReloadTime":2, "allLinkDo":true, "value":{"1":8, "10":12}, "toFixedCount":1}
-            ]},
-        "aura":{
-            "target":"all", "effect":{
-                "dmg":{"1":18, "5":36}},
-            "grid":[
-                {"x":-1, "y":-1},
-                {"x":-1, "y":1},
-                {"x":1, "y":0}]}},
-    {"id":"00204", "name":"芭莉斯塔", "type":"rf", "rarity":"5",
-        "hp":{"1":41, "100":82},
-        "dmg":{"1":45, "100":139},
-        "hit":{"1":10, "100":92},
-        "dodge":{"1":4, "100":35},
-        "fireOfRate":{"1":23, "100":36},
-        "skill":{
-            "name":"獵鷹刑場",
-            "firstCooldownTime":8,
-            "cooldownTime":{"1":20, "10":16},
-            "detailText":{
-                "0":"被動:每隔{0}秒會週期性給敵人添加1層標記。開啟技能後每次普攻會觸發一次額外攻擊<br>指向被標記目標並消耗1層標記。主動效果持續{1}秒或至標記全部消耗。",
-                "format":[{"effectIndex":0, "attr":"whenEveryXSeconds"}, {"effectIndex":1, "attr":"time"}]},
-            "effects":[
-                {"filter":"whenEveryXSeconds", "whenEveryXSeconds":{"1":3, "10":1.5}, "type":"debuff", "target":"enemy","attribute":"dmg", "value":{"0":0}},
-                {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"0":0}, "time":{"1":4, "10":6}},
-                {"filter":"attack", "buffFilter":"獵鷹刑場", "type":"attack", "target":"enemy", "targetWithBuff":"獵鷹刑場", "value":{"0":1}},
-                {"filter":"attack", "buffFilter":"獵鷹刑場", "type":"cleanBuff", "target":"enemy","buffName":"獵鷹刑場", "value":{"0":0}}
-            ]},
-        "aura":{
-            "target":"hg", "effect":{
-                "cooldownTime":{"0":18}},
-            "grid":[
-                {"x":1, "y":-1},
-                {"x":1, "y":1}]}},
-    {"id":"00198", "name":"卡爾卡諾M91/38", "type":"rf", "rarity":"5",
-        "hp":{"1":37, "100":73},
-        "dmg":{"1":47, "100":146},
-        "hit":{"1":10, "100":90},
-        "dodge":{"1":5, "100":44},
-        "fireOfRate":{"1":22, "100":34},
-        "skill":{
-            "name":"墨爾斯假面",
-            "firstCooldownTime":6,
-            "cooldownTime":{"1":10, "10":8},
-            "detailText":{
-                "0":"被動:攻擊有{0}%機率增加2層印記。印記達到18層後<br>下次攻擊對精英單位造成{1}%的傷害(對普通單位造成{2}%)並立即重置印記層數。<br>主動:立即增加{3}層印記。",
-                "format":[{"effectIndex":1, "attr":"rate"}, {"effectIndex":3, "attr":"value", "percent":true}, {"effectIndex":4, "attr":"value", "percent":true}, {"effectIndex":5, "attr":"value"}]},
-            "effects":[
-                {"filter":"battleStart", "type":"buff", "target":"self","attribute":"dmg", "value":{"0":0}, "initStack":0},
-                {"filter":"preAttack", "buffFilter":"墨爾斯假面", "type":"buffStackAdd", "target":"self","buffName":"墨爾斯假面", "value":{"1":1, "6":1, "7":2, "10":2}, "rate":{"1":30, "6":55, "7":55, "10":70}},
-                {"filter":"activeAttacked", "buffFilter":"墨爾斯假面", "buffFilterStackGreaterOrEqual":18, "type":"buffStackAdd", "target":"self","buffName":"墨爾斯假面", "value":{"0":-99}},
-                {"filter":"otherActive", "buffFilter":"墨爾斯假面", "buffFilterStackGreaterOrEqual":18, "type":"attack", "target":"enemy", "eliteTarget":true, "certainToHit":true, "ignoreArmor":true, "canCri":false, "value":{"1":1.8, "4":2.1, "5":2.25, "10":3}, "toFixedCount":2},
-                {"filter":"otherActive", "buffFilter":"墨爾斯假面", "buffFilterStackGreaterOrEqual":18, "type":"attack", "target":"enemy", "eliteTarget":false, "certainToHit":true, "ignoreArmor":true, "canCri":false, "value":{"1":27, "4":31.5, "5":33.75, "10":45}, "toFixedCount":2},
-                {"filter":"active", "type":"buffStackAdd", "target":"self","buffName":"墨爾斯假面", "value":{"1":12, "10":18}}
-            ]},
-        "aura":{
-            "target":"rf", "effect":{
-                "cooldownTime":{"0":10}},
-            "self":{"x":-1, "y":1},
-            "grid":[
-                {"x":-1, "y":0},
-                {"x":-1, "y":-1}]}},
     {"id":"20075", "name":"M1918", "type":"mg", "rarity":"5", "mod":true,
+        "isUnreleased":true,
+        "displayName":"M1918<br>[MOD]",
         "hp":{"mod1":159, "mod2":160, "mod3":161},
         "dmg":{"mod1":100, "mod2":100, "mod3":101},
         "hit":{"mod1":33, "mod2":34, "mod3":34},
@@ -5113,6 +5623,8 @@
             "grid":[
                 {"x":1, "y":0}]}},
     {"id":"20091", "name":"MP-446", "type":"hg", "rarity":"4", "mod":true,
+        "isUnreleased":true,
+        "displayName":"MP-446<br>[MOD]",
         "hp":{"mod1":67, "mod2":68, "mod3":68},
         "dmg":{"mod1":30, "mod2":30, "mod3":31},
         "hit":{"mod1":56, "mod2":57, "mod3":57},
@@ -5145,328 +5657,78 @@
                 {"x":-1, "y":-1},
                 {"x":-1, "y":1},
                 {"x":-1, "y":0}]}},
-    {"id":"20005", "name":"納甘左輪", "type":"hg", "rarity":"4", "mod":true,
-        "hp":{"mod1":71, "mod2":71, "mod3":72},
-        "dmg":{"mod1":35, "mod2":35, "mod3":35},
-        "hit":{"mod1":47, "mod2":48, "mod3":48},
-        "dodge":{"mod1":98, "mod2":99, "mod3":100},
-        "fireOfRate":{"mod1":45, "mod2":45, "mod3":45},
+    {"id":"20093", "name":"IDW", "type":"smg", "rarity":"4", "mod":true,
+        "isUnreleased":true,
+        "displayName":"IDW<br>[MOD]",
+        "hp":{"mod1":152, "mod2":153, "mod3":154},
+        "dmg":{"mod1":27, "mod2":27, "mod3":27},
+        "hit":{"mod1":16, "mod2":16, "mod3":16},
+        "dodge":{"mod1":90, "mod2":91, "mod3":92},
+        "fireOfRate":{"mod1":75, "mod2":75, "mod3":75},
         "skill":{
-            "name":"Firepower Suppresion N",
+            "name":"Evasion Focus",
             "firstCooldownTime":6,
-            "cooldownTime":{"1":15, "10":12},
+            "cooldownTime":{"1":10, "10":8},
             "detailText":{
-                "0":"降低敵方全體射速{0}% 持續{1}秒。",
+                "0":"提升自身迴避{0}%, 持續{1}秒",
                 "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
             "effects":[
-                {"filter":"active", "environment":"day", "type":"debuff", "target":"enemy_all", "attribute":"dmg", "value":{"1":15, "10":25}, "time":{"1":3, "10":5}},
-                {"filter":"active", "environment":"night", "type":"debuff", "target":"enemy_all", "attribute":"dmg", "value":{"1":25, "10":40}, "time":{"1":5, "2":6, "4":6, "5":7, "7":7, "8":8, "10":8}}
+                {"filter":"active", "type":"buff", "target":"self","attribute":"dodge", "value":{"1":70, "10":130}, "time":{"1":3, "10":5}}
             ]},
         "mod2Skill":{
-            "name":"潮音侵襲",
+            "name":"電光大狂歡",
             "detailText":{
-                "0":"7次攻擊後重新進行裝填<br>裝填後的第一次攻擊會提升全隊的火力{0}%與命中{1}% 持續{2}秒",
-                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
+                "0":"戰鬥開始時擁有3格電量,每一點電量會提供額外{0}%的射速及{1}%的火力<br>電量每{2}秒消耗一格<br>開啟掩護專注時電量會充滿",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":1, "attr":"stackDownWhenEveryTime"}]},
             "effects":[
-                {"filter":"firstAttackEveryXTimes", "everyXTimes":7, "type":"buff", "target":"ally", "attribute":"dmg", "value":{"1":5, "10":10}, "time":{"1":2, "10":4}},
-                {"filter":"firstAttackEveryXTimes", "everyXTimes":7, "type":"buff", "target":"ally", "attribute":"hit", "value":{"1":5, "10":10}, "time":{"1":2, "10":4}}
+                {"filter":"battleStart", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":6, "10":10}, "initStack":3, "stackMax":3, "stackDownWhenEveryTime":{"1":1, "10":2}},
+                {"filter":"battleStart", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":12, "10":20}, "initStack":3, "stackMax":3, "stackDownWhenEveryTime":{"1":1, "10":2}},
+                {"filter":"active", "type":"buffStackAdd", "target":"self","buffName":"電光大狂歡", "value":{"0":3}}
             ]},
         "aura":{
-            "target":"all", "effect":{
-                "dmg":{"1":18, "5":36},
-                "criRate":{"1":10, "5":20}},
+            "target":"ar", "effect":{
+                "dodge":{"0":20},
+                "criRate":{"0":10}},
             "grid":[
-                {"x":0, "y":1},
-                {"x":0, "y":-1},
-                {"x":-1, "y":0}]}},
-    {"id":"00151", "name":"M1887", "type":"sg", "rarity":"5",
-        "hp":{"1":138, "100":275},
-        "dmg":{"1":14, "100":39},
-        "dodge":{"1":2, "100":12},
-        "hit":{"1":2, "100":12},
-        "fireOfRate":{"1":15, "100":22},
-        "ammoCount":4,
-        "armor":{"1":3, "100":22},
+                {"x":-1, "y":-1},
+                {"x":-1, "y":0},
+                {"x":-1, "y":1}]}},
+    {"id":"20094", "name":"Type 64", "type":"smg", "rarity":"4", "mod":true,
+        "isUnreleased":true,
+        "displayName":"Type 64<br>[MOD]",
+        "hp":{"mod1":179, "mod2":180, "mod3":181},
+        "dmg":{"mod1":28, "mod2":28, "mod3":28},
+        "hit":{"mod1":12, "mod2":12, "mod3":12},
+        "dodge":{"mod1":69, "mod2":70, "mod3":70},
+        "fireOfRate":{"mod1":93, "mod2":93, "mod3":93},
         "skill":{
-            "name":"終結打擊",
-            "firstCooldownTime":15,
-            "cooldownTime":{"1":20, "10":16},
-            "detailText":{
-                "0":"對單個目標固定造成{0}點傷害<br>並造成{1}碼的擊退效果。",
-                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":0, "attr":"knockingBack"}]},
-            "effects":[
-                {"filter":"active", "type":"attack", "target":"enemy", "allLinkDo":true, "fixedDmg":true, "value":{"1":100, "10":1000}, "knockingBack":{"1":2, "10":3}}
-            ]},
-        "aura":{
-            "target":"mg", "effect":{
-                "dmg":{"0":20},
-                "hit":{"0":20}},
-            "self":{"x":1, "y":0},
-            "grid":[
-                {"x":-1, "y":0}]}},
-    {"id":"30001", "name":"Clear", "type":"hg", "rarity":"extra",
-        "hp":{"1":"35", "100":"66"},
-        "dmg":{"1":"11", "100":"31"},
-        "dodge":{"1":"11", "100":"88"},
-        "hit":{"1":"6", "100":"62"},
-        "fireOfRate":{"1":"29", "100":"61"},
-        "skill":{
-            "name":"再接再厲！",
-            "type":"buff",
-            "target":"ally",
-            "firstCooldownTime":"6",
-            "detailText":{
-                "0":"暫停普通攻擊並進行五次演奏<br />每次提升隨機一位隊友的火力和命中30%(裝備“榮耀之光”後提升至40%)<br />效果可疊加1層<br />每層持續3秒。",
-                "format":[]},
-            "cooldownTime":{"1":"15", "10": "12"},
-            "effect":{
-				"dmg":{"1":"9", "10":"18"},
-				"time":{"1":"6","10":"6"}}},
-        "aura":{
-            "target":"all", "effect":{
-                "fireOfRate":{"1":"15", "5":"30"}, 
-				"hit":{"1":"25", "5":"50"}},
-            "grid":[
-                {"x":"-1", "y":"1"},
-                {"x":"0", "y":"1"},
-                {"x":"-1", "y":"0"},
-                {"x":"-1", "y":"-1"},
-                {"x":"0", "y":"-1"}]}},
-    {"id":"30002", "name":"Fail", "type":"hg", "rarity":"extra",
-        "hp":{"1":"35", "100":"66"},
-        "dmg":{"1":"11", "100":"31"},
-        "dodge":{"1":"11", "100":"87"},
-        "hit":{"1":"6", "100":"62"},
-        "fireOfRate":{"1":"29", "100":"61"},
-        "skill":{
-            "name":"慢慢來吧～",
-            "type":"",
-            "target":"",
-            "firstCooldownTime":"6",
-			"detailText":{
-                "0":"暫停普通攻擊並進行五次演奏<br />每次降低隨機3名敵方單位的射速和命中12%(裝備“漆黑之貓”後提升至15%)<br />效果可疊加2層<br />每層持續3秒。",
-                "format":[]},
-            "cooldownTime":{"1":"15", "10": "12"},
-            "effect":{
-			},
-            "effectNight":{
-			}},
-        "aura":{
-            "target":"all", "effect":{
-                "dmg":{"1":"15", "5":"30"},
-                "hit":{"1":25, "5":50}},
-            "grid":[
-                {"x":"0", "y":"1"},
-                {"x":"1", "y":"1"},
-                {"x":"1", "y":"0"},
-                {"x":"0", "y":"-1"},
-                {"x":"1", "y":"-1"}]}},
-    {"id":"00220", "name":"MP-443", "type":"hg", "rarity":"3",
-        "hp":{"1":"35", "100":"70"},
-        "dmg":{"1":"12", "100":"33"},
-        "dodge":{"1":"9", "100":"71"},
-        "hit":{"1":"7", "100":"53"},
-        "fireOfRate":{"1":"40", "100":"59"},
-        "skill":{
-            "name":"火力壓制",
-            "type":"debuff",
-            "target":"enemy_all",
-            "firstCooldownTime":"6",
-            "cooldownTime":{"1":"15", "10": "12"},
-            "effect":{
-                "dmg":{"1":"15", "10":"25"},
-                "time":{"1":"5", "2":"6", "3":"6", "4":"6", "5":"7", "6":"7", "7":"7", "8":"8", "9":"8", "10":"8"}}},
-        "aura":{
-            "target":"all", "effect":{
-                "dmg":{"1":"10", "5":"20"},
-				"dodge":{"1":"10", "5":"20"}},
-            "grid":[
-                {"x":"0", "y":"1"},
-                {"x":"1", "y":"1"},
-                {"x":"1", "y":"0"},
-                {"x":"0", "y":"-1"},
-                {"x":"1", "y":"-1"}]}},		
-    {"id":"00137", "name":"PP-19-01", "type":"smg", "rarity":"4",
-        "hp":{"1":"97", "100":"194"},
-        "dmg":{"1":"11", "100":"27"},
-        "dodge":{"1":"10", "100":"68"},
-        "hit":{"1":"2", "100":"13"},
-        "fireOfRate":{"1":"60", "100":"85"},
-        "skill":{
-            "name":"煙霧彈",
+            "name":"Stun Grenade",
             "type":"debuff",
             "target":"enemy",
-            "firstCooldownTime":"1",
+            "firstCooldownTime":"5",
             "cooldownTime":{"1":"20", "10": "16"},
             "radius":"2.5",
             "effect":{
-                "fireOfRate":{"1":"25", "10":"40"},
-                "movementSpeed":{"1":"30", "10":"50"},
-                "time":{"1":"2.5", "10":"4"}}},
-        "aura":{
-            "target":"ar", "effect":{
-                "fireOfRate":{"1":"12", "5":"12"},
-                "hit":{"1":"30", "5":"30"}},
-            "grid":[
-                {"x":"-1", "y":"1"},
-                {"x":"-1", "y":"-1"}]}},
-    {"id":"0073", "name":"AUG", "type":"ar", "rarity":"5",
-        "hp":{"1":61, "100":121},
-        "dmg":{"1":21, "100":55},
-        "hit":{"1":7, "100":57},
-        "dodge":{"1":7, "100":46},
-        "fireOfRate":{"1":50, "100":75},
-		"criRate":30,
-        "skill":{
-            "name":"Rain of Burial",
-            "firstCooldownTime":4,
-            "cooldownTime":{"1":20, "10": 16},
+                "stun":{"1":"1", "10":"1"},
+                "time":{"1":"2.2", "10":"4"}}},
+        "mod2Skill":{
+            "name":"Silencing Flash",
             "detailText":{
-                "0":"Reduce own Accuracy by {0}, increase ROF by 150 and enter sweep mode, lasts for {1} seconds.",
+                "0":"Enemies hit by Flashbang suffer a {0}% decrease to their accuracy for {1} seconds, including enemies who are immune to its stunning effect.",
                 "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
             "effects":[
-                {"filter":"active", "type":"debuff", "target":"self", "attribute":"hit", "value":{"1":30, "10":0}, "time":{"1":3, "10":7}},
-                {"filter":"active", "type":"buff", "target":"self", "attribute":"attackFrame", "value":{"0":10}, "time":{"1":3, "10":7}}
+                {"filter":"active", "type":"debuff", "target":"enemy","attribute":"hit", "value":{"1":25, "10":40}, "time":{"1":5, "10":8}}
             ]},
         "aura":{
-            "target":"all", "effect":{
-                "dmg":{"0":12},
-                "hit":{"0":20}},
-            "grid":[
-                {"x":0, "y":1},
-                {"x":0, "y":-1},
-                {"x":1, "y":0},
-                {"x":1, "y":1},
-                {"x":1, "y":-1}]}},
-	{"id":"00221", "name":"Gsh-18", "type":"hg", "rarity":"3",
-        "hp":{"1":35, "100":70},
-        "dmg":{"1":13, "100":33},
-        "dodge":{"1":12, "100":86},
-        "hit":{"1":7, "100":48},
-        "fireOfRate":{"1":36, "100":52},
-        "skill":{
-            "name":"鎖鏈衝擊",
-            "firstCooldownTime":6,
-            "cooldownTime":{"1":15, "10":12},
-            "detailText":{
-                "0":"技能期間使用雙槍攻擊，造成兩次傷害且必定暴擊，持續{0}秒",
-                "format":[{"textIndex":0, "effectIndex":0, "attr":"time"}]},
-            "effects":[
-                {"filter":"active", "type":"buff", "target":"self","attribute":"criRate", "value":{"1":500, "10":500}, "time":{"1":3, "10":6}},
-                {"filter":"attack", "buffFilter":"鎖鏈衝擊", "type":"attack", "target":"enemy", "value":{"0":1}}
-            ]},
-        "aura":{
-            "target":"all", "effect":{
-                "dmg":{"1":12,"5":24},
-                "hit":{"1":20,"5":40}},
-            "grid":[
-                {"x":0, "y":1},
-                {"x":0, "y":-1},
-				{"x":-1, "y":0},
-				{"x":-1, "y":1},
-                {"x":-1, "y":-1}]}},	
-    {"id":"00222", "name":"TAC-50", "type":"rf", "rarity":"5",
-        "hp":{"1":"44", "100":"87"},
-        "dmg":{"1":"52", "100":"155"},
-        "dodge":{"1":"4", "100":"31"},
-        "hit":{"1":"10", "100":"83"},
-        "fireOfRate":{"1":"21", "100":"32"},
-        "skill":{
-            "name":"楓華螢火",
-            "type":"attack",
-            "target":"enemy_specific",
-            "firstCooldownTime":"10",
-            "cooldownTime":{"1":"20", "10": "16"},
-            "detailText":{
-                "0":"被動：技能冷卻結束后，TAC的無人機會標記隨機敵人(每秒刷新一次)。<br />主動：對被標記的敵人進行一次可以暴擊的狙擊，造成4.5倍的傷害。<br />前置冷卻10秒，冷卻時間:16秒",
-                "format":[]},
-            "effect":{
-                "attack":{"1":"2.5", "10":"4.5"},
-                "time":{"1":"", "10":""}}},
-        "aura":{
-            "target":"hg", "effect":{
-                "cooldownTime":{"1":"18", "5":"18"}},
-            "grid":[
-                {"x":1, "y":1},
-                {"x":1, "y":0}]}},
-	{"id":"00228", "name":"Type100", "type":"smg", "rarity":"5",
-        "hp":{"1":"106", "100":"212"},
-        "dmg":{"1":"11", "100":"29"},
-        "dodge":{"1":"9", "100":"67"},
-        "hit":{"1":"2", "100":"14"},
-        "fireOfRate":{"1":"52", "100":"76"},
-        "skill":{
-            "name":"櫻逆像",
-            "type":"",
-            "target":"",
-            "firstCooldownTime":8,
-            "cooldownTime":{"1":20, "10":16},
-            "detailText":{
-                "0":"5秒時間內，為自身釋放一個能吸收15點（42點）傷害的護盾。<br />若持續時間內護盾被打破，則在破壞後的3秒（5秒）內提升自身迴避30%（65%）。<br />若持續時間內護盾未打破，則在持續時間結束後的3秒（5秒）內提升自身火力40%（85%）。<br />開場CD8秒，技能間隔CD20秒（16秒）",
-                "format":[]},
-            "effect":{
-			},
-            "effectNight":{
-			}},
-        "aura":{
             "target":"ar", "effect":{
-                "dmg":{"1":"12", "5":"12"},
-				"hit":{"1":"35", "5":"35"}},
+                "fireOfRate":{"0":24}},
             "grid":[
-                {"x":"-1", "y":"1"},
-                {"x":"-1", "y":"-1"}]}},
-{"id":"00195", "name":"HK23", "type":"mg", "rarity":"3",
-        "hp":{"1":"75", "100":"149"},
-        "dmg":{"1":"28", "100":"80"},
-        "dodge":{"1":"4", "100":"34"},
-        "hit":{"1":"4", "100":"34"},
-        "fireOfRate":{"1":"90", "100":"135"},
-        "ammoCount":"9",
-        "skill":{
-            "name":"蓄勢待發",
-            "type":"buff",
-            "target":"self",
-            "firstCooldownTime":"8",
-            "cooldownTime":{"1":"18", "10": "18"},
-            "effect":{
-                "dmg":{"1":"18", "10":"30"},
-                "ammoCount":{"1":"1", "10":"3"},
-                "time":{"1":"6", "10":"8"}}},
-        "aura":{
-            "target":"sg", "effect":{
-				"dmg":{"1":"8", "5":"8"},
-                "armor":{"1":"12", "5":"12"}},
-            "self":{"x":"-1", "y":"0"},
-            "grid":[
-                {"x":"1", "y":"0"},
-                {"x":"1", "y":"-1"}]}},
-	{"id":"00218", "name":"T77", "type":"smg", "rarity":"3",
-        "hp":{"1":"93", "100":"186"},
-        "dmg":{"1":"10", "100":"24"},
-        "dodge":{"1":"10", "100":"70"},
-        "hit":{"1":"2", "100":"12"},
-        "fireOfRate":{"1":"66", "100":"92"},
-        "skill":{
-            "name":"掩護專注T",
-            "type":"buff",
-            "target":"self",
-            "firstCooldownTime":"5",
-            "cooldownTime":{"1":"20", "10": "16"},
-            "effect":{
-                "dodge":{"1":"22", "10":"40"},
-                "time":{"1":"9", "10":"15"}}},
-        "aura":{
-            "target":"ar", "effect":{
-                "fireOfRate":{"1":"12", "5":"12"}},
-            "grid":[
-                {"x":"-1", "y":"1"},
-				{"x":"-1", "y":"0"},
-                {"x":"-1", "y":"-1"}]}}
-], "attackFrame":[
-    {"id":"00208", "frame":9},
+                {"x":-1, "y":0}]}}
+],
+    "attackFrame":[
+    {"id":"208", "frame":9},
     {"id":"173", "frame":11},
     {"id":"77", "frame":11},
     {"id":"109", "frame":11},
-    {"id":"85", "frame":11}
-]
+    {"id":"85", "frame":11}]
 }
