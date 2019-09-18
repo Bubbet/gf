@@ -3,10 +3,10 @@ English fork of ynntk4815's calculators, the original chinese calculators can be
 
 English fork of chibimonxd's auto formation generation, original can be found [here](https://chibimonxd.github.io/gf/auto.html)
 
-[Logistics calculator](https://gfeAsdf.github.io/gf/main.html)
+[Logistics calculator](https://bubbet.github.io/gf/main.html)
 
-[DPS/Formation sim](https://gfeAsdf.github.io/gf/main2.html)
+[DPS/Formation sim](https://bubbet.github.io/gf/main2.html)
 
-[Formation Generator](https://gfeAsdf.github.io/gf/auto.html)
+[Formation Generator](https://bubbet.github.io/gf/auto.html)
 
 [T-Doll Gacha sim](https://i.imgur.com/iYieU8U.mp4)
